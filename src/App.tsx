@@ -7,8 +7,15 @@ import Hero from './sections/Hero';
 function App() {
 	const [themeMode, setThemeMode] = useState<ThemeMode>('dark');
 
+	function toggleTheme() {
+		setThemeMode(prev => (prev === 'dark' ? 'light' : 'dark'));
+	}
+
 	return (
 		<ThemeProvider theme={theme[themeMode]}>
+			<button style={{ display: 'none' }} onClick={toggleTheme}>
+				Toggle Theme
+			</button>
 			<Navbar />
 			<MainWrapper>
 				<Hero />
