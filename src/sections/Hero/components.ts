@@ -27,11 +27,9 @@ export const HeroText = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	flex-grow: 1;
 
 	.typed {
 		display: flex;
-
 		p {
 			${ProfessionStyle};
 			background: linear-gradient(
@@ -58,13 +56,13 @@ export const HeroText = styled.div`
 		align-items: center;
 		text-align: center;
 		width: 100%;
+		flex-grow: 1;
 	}
 `;
 
 export const HeroCardWrapper = styled.div`
 	position: relative;
 	width: 50%;
-
 	@media screen and (max-width: 768px) {
 		width: 100%;
 	}

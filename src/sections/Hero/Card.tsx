@@ -59,22 +59,31 @@ export default function Card() {
 	const shapes = useMemo(() => Array.from({ length: 10 }, generateRandomShape), []);
 
 	return (
-		<Atropos
-			activeOffset={10}
-			shadowScale={1.05}
-			onEnter={() => setIsHovering(true)}
-			onLeave={() => setIsHovering(false)}
-			duration={500}
-		>
-			<CardWrapper data-atropos-offset='-5'>
-				{...shapes}
-				<BlobWrapper className='blob-wrapper' data-atropos-offset='-10'>
-					<img src='/pngs/fran.png' alt='Fran' className={`beto-img ${isHovering ? 'hovered' : ''}`} />
-				</BlobWrapper>
-			</CardWrapper>
-		</Atropos>
+		<Wrapper>
+			<Atropos
+				activeOffset={10}
+				shadowScale={1.05}
+				onEnter={() => setIsHovering(true)}
+				onLeave={() => setIsHovering(false)}
+				duration={500}
+				className='my-atropos'
+			>
+				<CardWrapper data-atropos-offset='-5'>
+					{...shapes}
+					<BlobWrapper className='blob-wrapper' data-atropos-offset='-10'>
+						<img src='/pngs/fran.png' alt='Fran' className={`beto-img ${isHovering ? 'hovered' : ''}`} />
+					</BlobWrapper>
+				</CardWrapper>
+			</Atropos>
+		</Wrapper>
 	);
 }
+
+const Wrapper = styled.div`
+	.atropos-inner {
+		overflow: visible;
+	}
+`;
 
 const CardWrapper = styled.div`
 	position: relative;
