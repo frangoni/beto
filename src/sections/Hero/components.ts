@@ -45,6 +45,7 @@ export const HeroText = styled.div`
 
 			@media screen and (max-width: 768px) {
 				white-space: break-spaces;
+				min-height: 10rem;
 			}
 		}
 	}

@@ -7,8 +7,8 @@ import 'atropos/css';
 import { randomNumberFromRange } from '../../shared/utils';
 
 function generateRandomShape() {
-	const top = randomNumberFromRange(10, 90);
-	const left = randomNumberFromRange(10, 90);
+	const top = randomNumberFromRange(20, 80);
+	const left = randomNumberFromRange(20, 80);
 	const size = randomNumberFromRange(2, 5);
 	const bgColor = randomNumberFromRange(0, 1) === 0 ? 'primary' : 'secondary';
 	const offset = randomNumberFromRange(25, 200);
@@ -56,7 +56,7 @@ export default function Card() {
 			});
 	});
 
-	const shapes = useMemo(() => Array.from({ length: 10 }, generateRandomShape), []);
+	const shapes = useMemo(() => Array.from({ length: 6 }, generateRandomShape), []);
 
 	return (
 		<Wrapper>
