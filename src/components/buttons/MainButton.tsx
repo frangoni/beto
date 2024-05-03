@@ -72,5 +72,7 @@ const AppButton = styled.button`
 		top: 0;
 		border-radius: 0.8rem;
 	}
-	content: '';
+	@media screen and (max-width: 768px) {
+		padding: 0.6rem 1rem;
+	}
 `;

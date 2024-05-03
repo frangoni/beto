@@ -259,7 +259,7 @@ export default function Background() {
 
 const StyledSVG = styled.svg`
 	position: absolute;
-	z-index: 0;
+	z-index: -1;
 	.stop-1 {
 		stop-color: ${({ theme }) => theme.primary['20']};
 	}

@@ -3,7 +3,6 @@ import Section from '../../layout/Section';
 import { HeroCardWrapper, HeroLayout, HeroText } from './components';
 import Typed from 'typed.js';
 import Card from './Card';
-import Background from './Background';
 
 export default function Hero() {
 	const el = useRef(null);
@@ -21,22 +20,19 @@ export default function Hero() {
 	}, []);
 
 	return (
-		<>
-			<Background />
-			<Section isLarge={false}>
-				<HeroLayout>
-					<HeroText>
-						<h1>Nice to meet you!</h1>
-						<h1>I am Beto, a ...</h1>
-						<span className='typed'>
-							<p ref={el} />
-						</span>
-					</HeroText>
-					<HeroCardWrapper>
-						<Card />
-					</HeroCardWrapper>
-				</HeroLayout>
-			</Section>
-		</>
+		<Section isLarge={false}>
+			<HeroLayout>
+				<HeroText>
+					<h1>Nice to meet you!</h1>
+					<h1>I am Beto, a ...</h1>
+					<span className='typed'>
+						<p ref={el} />
+					</span>
+				</HeroText>
+				<HeroCardWrapper>
+					<Card />
+				</HeroCardWrapper>
+			</HeroLayout>
+		</Section>
 	);
 }

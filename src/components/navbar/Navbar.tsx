@@ -2,7 +2,6 @@ import { keyframes, styled } from 'styled-components';
 import logo from '/svgs/beto.svg';
 import Portfolio from './icons/portfolio';
 import Work from './icons/work';
-import Me from './icons/me';
 import Education from './icons/education';
 import { ContainerLarge, PaddingGlobal } from '../../layout/Section';
 import Button from '../buttons/MainButton';
@@ -27,9 +26,6 @@ export default function Navbar() {
 							<img className='beto-logo' src={logo} alt='Beto dev' />
 						</a>
 						<div className='icons-wrapper'>
-							<a href='#hero'>
-								<Me />
-							</a>
 							<a href='#work'>
 								<Work />
 							</a>
@@ -57,6 +53,9 @@ const Nav = styled.nav`
 	position: fixed;
 	width: 100vw;
 	z-index: 100;
+
+	@media screen and (max-width: 768px) {
+	}
 `;
 
 const drawStroke = keyframes`
@@ -72,6 +71,10 @@ const NavContainer = styled.div`
 	height: 5rem;
 	transition: all 0.3s ease-in-out;
 
+	@media screen and (max-width: 768px) {
+		padding: 2rem 1rem;
+	}
+
 	&.scrolled {
 		background: rgba(111, 111, 111, 0.3);
 		box-shadow: 0 8px 32px 0 ${({ theme }) => theme.primary['20']};
@@ -85,6 +88,9 @@ const NavContainer = styled.div`
 	.icons-wrapper {
 		display: flex;
 		gap: 2rem;
+		@media screen and (max-width: 768px) {
+			gap: 1rem;
+		}
 
 		a {
 			text-decoration: none;
@@ -105,6 +111,9 @@ const NavContainer = styled.div`
 				transform: scale(1.1);
 				filter: drop-shadow(0 0 0.75rem ${({ theme }) => theme.primary['100']});
 			}
+			@media screen and (max-width: 768px) {
+				width: 2rem;
+			}
 		}
 	}
 
@@ -116,6 +125,10 @@ const NavContainer = styled.div`
 			transform: scale(1.1);
 			rotate: -30deg;
 			filter: drop-shadow(0 0 0.75rem ${({ theme }) => theme.primary['100']});
+		}
+
+		@media screen and (max-width: 768px) {
+			width: 2rem;
 		}
 	}
 `;

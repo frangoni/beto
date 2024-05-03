@@ -3,6 +3,7 @@ import theme, { ThemeMode } from './settings/theme';
 import { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Hero from './sections/Hero';
+import Background from './sections/Hero/Background';
 
 function App() {
 	const [themeMode, setThemeMode] = useState<ThemeMode>('dark');
@@ -13,6 +14,7 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme[themeMode]}>
+			<Background />
 			<button style={{ display: 'none' }} onClick={toggleTheme}>
 				Toggle Theme
 			</button>

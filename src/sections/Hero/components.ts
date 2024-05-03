@@ -4,17 +4,18 @@ export const HeroLayout = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
 	gap: 2rem;
 
 	@media screen and (max-width: 768px) {
-		flex-direction: column;
-		padding-top: 15rem;
+		flex-direction: column-reverse;
+		padding-top: 6rem;
+		height: 100vh;
 	}
 `;
 
 const ProfessionStyle = css`
-	font-size: 4rem;
+	font-size: 3rem;
 	font-family: 'Grandstander';
 	font-weight: 900;
 	@media screen and (max-width: 768px) {
@@ -30,6 +31,7 @@ export const HeroText = styled.div`
 
 	.typed {
 		display: flex;
+
 		p {
 			${ProfessionStyle};
 			background: linear-gradient(
@@ -41,6 +43,11 @@ export const HeroText = styled.div`
 			-webkit-text-fill-color: transparent;
 			-webkit-box-decoration-break: clone;
 			box-decoration-break: clone;
+			white-space: pre;
+
+			@media screen and (max-width: 768px) {
+				white-space: break-spaces;
+			}
 		}
 	}
 	.typed-cursor {
@@ -56,5 +63,9 @@ export const HeroText = styled.div`
 
 export const HeroCardWrapper = styled.div`
 	position: relative;
-	flex-shrink: 1;
+	width: 50%;
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
 `;
