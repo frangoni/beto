@@ -10,7 +10,7 @@ export const HeroLayout = styled.div`
 	@media screen and (max-width: 768px) {
 		flex-direction: column-reverse;
 		padding-top: 6rem;
-		height: 100vh;
+		min-height: 100vh;
 	}
 `;
 
