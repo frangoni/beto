@@ -9,7 +9,7 @@ export const HeroLayout = styled.div`
 
 	@media screen and (max-width: 768px) {
 		flex-direction: column-reverse;
-		padding-top: 6rem;
+		padding-top: 8rem;
 		max-height: 100vh;
 	}
 `;
@@ -70,6 +70,7 @@ export const HeroCardWrapper = styled.div`
 	position: relative;
 	width: 50%;
 	@media screen and (max-width: 768px) {
-		width: 100%;
+		width: 85%;
+		height: 85%;
 	}
 `;
