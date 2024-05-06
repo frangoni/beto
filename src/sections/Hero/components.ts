@@ -10,7 +10,7 @@ export const HeroLayout = styled.div`
 	@media screen and (max-width: 768px) {
 		flex-direction: column-reverse;
 		padding-top: 6rem;
-		min-height: 100vh;
+		max-height: 100vh;
 	}
 `;
 
@@ -27,6 +27,11 @@ export const HeroText = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	span {
+		${ProfessionStyle};
+		font-size: 4rem;
+	}
 
 	.typed {
 		display: flex;

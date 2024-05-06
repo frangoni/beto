@@ -24,7 +24,9 @@ export default function Hero() {
 			<HeroLayout>
 				<HeroText>
 					<h1>Nice to meet you!</h1>
-					<h1>I am Beto, a ...</h1>
+					<h1>
+						I am <span>Beto</span>, a ...
+					</h1>
 					<span className='typed'>
 						<p ref={el} />
 					</span>

@@ -58,11 +58,12 @@ const Nav = styled.nav`
 	}
 `;
 
-const drawStroke = keyframes`
+export const drawStroke = keyframes`
 	to {
 		stroke-dashoffset: 0;
 	}
 `;
+
 const NavContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
