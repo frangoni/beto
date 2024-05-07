@@ -25,20 +25,20 @@ export default function Card() {
 			})
 			.to('.icon-1', {
 				duration: 0.5,
-				top: 40,
-				left: 30,
+				top: '10%',
+				left: '10%',
 				opacity: 1,
 			})
 			.to('.icon-2', {
 				duration: 0.5,
-				top: 150,
-				right: 30,
+				top: '20%',
+				right: '5%',
 				opacity: 1,
 			})
 			.to('.icon-3', {
 				duration: 0.5,
-				bottom: 30,
-				right: 50,
+				bottom: '10%',
+				right: '60%',
 				opacity: 1,
 			})
 			.to('.icon path, .icon rect', {
