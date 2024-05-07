@@ -29,6 +29,7 @@ h2,
 h3,
 h4,
 p,
+a,
 button {
 	margin: 0;
 	padding: 0;
@@ -73,6 +74,16 @@ h4 {
 p {
 	font-size: 1.2rem;
 	font-family: 'MontBlanc';
+
+	@media screen and (max-width: 768px) {
+		font-size: 1rem;
+	}
+}
+
+a {
+	font-size: 1.2rem;
+	font-family: 'MontBlanc';
+	text-decoration: none;
 
 	@media screen and (max-width: 768px) {
 		font-size: 1rem;

@@ -5,9 +5,10 @@ interface AppButtonProps {
 	onClick: () => void;
 }
 
-export default function MainButton({ content, onClick }: AppButtonProps) {
+export default function MainButton(props: AppButtonProps) {
+	const { content, onClick, ...rest } = props;
 	return (
-		<AppButton role='button' onClick={onClick}>
+		<AppButton role='button' onClick={onClick} {...rest}>
 			{content}
 		</AppButton>
 	);
@@ -26,7 +27,7 @@ const glowingButton = keyframes`
 `;
 
 const AppButton = styled.button`
-	padding: 0.6rem 2rem;
+	padding: 1rem 1.5rem;
 	border: none;
 	outline: none;
 	color: ${({ theme }) => theme.button.text};
@@ -73,6 +74,6 @@ const AppButton = styled.button`
 		border-radius: 0.8rem;
 	}
 	@media screen and (max-width: 768px) {
-		padding: 0.6rem 1rem;
+		padding: 1rem 1.5rem;
 	}
 `;

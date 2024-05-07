@@ -1,14 +1,19 @@
-import { keyframes, styled } from 'styled-components';
+import { css, keyframes, styled } from 'styled-components';
 import logo from '/svgs/beto.svg';
 import Portfolio from './icons/portfolio';
 import Work from './icons/work';
 import Education from './icons/education';
+import Menu from './icons/menu';
 import { ContainerLarge, PaddingGlobal } from '../../layout/Section';
 import Button from '../buttons/MainButton';
+
 import { useEffect, useState } from 'react';
+import MobileMenu from './MobileMenu';
 
 export default function Navbar() {
 	const [hasScrolled, setHasScrolled] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
+	console.log(isOpen);
 
 	useEffect(() => {
 		const handleScroll = () => (window.scrollY > 100 ? setHasScrolled(true) : setHasScrolled(false));
@@ -16,23 +21,26 @@ export default function Navbar() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
+	function handleOpen() {
+		setIsOpen(!isOpen);
+	}
 	const cls = hasScrolled ? 'scrolled' : '';
 	return (
 		<Nav>
 			<PaddingGlobal>
 				<ContainerLarge>
 					<NavContainer className={cls}>
-						<a href='#root'>
+						<a href='#root' className='nav-icon'>
 							<img className='beto-logo' src={logo} alt='Beto dev' />
 						</a>
 						<div className='icons-wrapper'>
-							<a href='#work'>
+							<a href='#work' className='nav-icon'>
 								<Work />
 							</a>
-							<a href='#portfolio'>
+							<a href='#portfolio' className='nav-icon'>
 								<Portfolio />
 							</a>
-							<a href='#education'>
+							<a href='#education' className='nav-icon'>
 								<Education />
 							</a>
 						</div>
@@ -42,7 +50,11 @@ export default function Navbar() {
 								console.log('pressed');
 							}}
 						/>
+						<span className='nav-icon mobile' onClick={handleOpen}>
+							<Menu />
+						</span>
 					</NavContainer>
+					<MobileMenu isOpen={isOpen} handleOpen={handleOpen} />
 				</ContainerLarge>
 			</PaddingGlobal>
 		</Nav>
@@ -53,15 +65,19 @@ const Nav = styled.nav`
 	position: fixed;
 	width: 100vw;
 	z-index: 100;
-
-	@media screen and (max-width: 768px) {
-	}
 `;
 
-export const drawStroke = keyframes`
+const drawStroke = keyframes`
 	to {
 		stroke-dashoffset: 0;
 	}
+`;
+
+const IconStyle = css`
+	color: ${({ theme }) => theme.text};
+	width: 2.5rem;
+	height: 2.5rem;
+	transition: all 0.3s ease-in-out;
 `;
 
 const NavContainer = styled.div`
@@ -74,6 +90,10 @@ const NavContainer = styled.div`
 
 	@media screen and (max-width: 768px) {
 		padding: 2rem 1rem;
+
+		button {
+			display: none;
+		}
 	}
 
 	&.scrolled {
@@ -93,16 +113,19 @@ const NavContainer = styled.div`
 			gap: 1rem;
 		}
 
-		a {
-			text-decoration: none;
-			padding: 0.5rem;
+		@media screen and (max-width: 768px) {
+			display: none;
 		}
+	}
+
+	.nav-icon {
+		text-decoration: none;
+		padding: 0.5rem;
+		cursor: pointer;
+
 		svg {
-			color: ${({ theme }) => theme.text};
-			width: 2.5rem;
-			height: 2.5rem;
-			transition: all 0.3s ease-in-out;
-			path {
+			${IconStyle}
+			path,circle {
 				stroke-dasharray: 1000;
 				stroke-dashoffset: 1000;
 				animation: ${drawStroke} 1s forwards;
@@ -112,8 +135,11 @@ const NavContainer = styled.div`
 				transform: scale(1.1);
 				filter: drop-shadow(0 0 0.75rem ${({ theme }) => theme.primary['100']});
 			}
+		}
+		&.mobile {
+			display: none;
 			@media screen and (max-width: 768px) {
-				width: 2rem;
+				display: block;
 			}
 		}
 	}
