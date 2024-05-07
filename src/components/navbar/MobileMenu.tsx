@@ -58,20 +58,9 @@ const Drawer = styled.div`
 	z-index: 100;
 
 	transition: all 0.3s ease-in-out;
+
 	&.open {
-		width: 75vw;
-		&::before {
-			content: '';
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 25vw;
-			height: 100vh;
-			background-color: rgba(0, 0, 0, 0.5);
-			backdrop-filter: blur(0.5rem);
-			-webkit-backdrop-filter: blur(0.5rem);
-			z-index: -1;
-		}
+		width: 100vw;
 	}
 
 	.close-icon {
@@ -96,11 +85,11 @@ const Drawer = styled.div`
 const Nav = styled.nav`
 	overflow: hidden;
 	display: flex;
-	justify-content: space-between;
-	align-items: end;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column;
+	height: 100%;
 	gap: 2rem;
-	padding: 6rem 2rem;
 	min-width: 15rem;
 
 	a {
