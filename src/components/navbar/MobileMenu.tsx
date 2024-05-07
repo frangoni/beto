@@ -56,6 +56,8 @@ const Drawer = styled.div`
 	transition: width 0.3s;
 	background-color: ${({ theme }) => theme.secondaryBackground};
 	z-index: 100;
+
+	transition: all 0.3s ease-in-out;
 	&.open {
 		width: 75vw;
 		&::before {
@@ -77,7 +79,6 @@ const Drawer = styled.div`
 		right: -20rem;
 		top: 0;
 		cursor: pointer;
-		transition: all 0.3s ease-in-out;
 
 		&.open {
 			top: 2rem;
@@ -88,7 +89,6 @@ const Drawer = styled.div`
 			width: 2.5rem;
 			height: 2.5rem;
 			color: ${({ theme }) => theme.text};
-			transition: all 0.3s ease-in-out;
 		}
 	}
 `;
