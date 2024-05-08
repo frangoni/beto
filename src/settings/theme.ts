@@ -42,11 +42,11 @@ const theme: Record<ThemeMode, Theme> = {
 		secondaryBackground: '#cdcdcd',
 		text: '#040404',
 		button: {
-			background: '#cdcdcd',
+			background: '#ebebeb',
 			text: '#040404',
 		},
 		card: {
-			background: ' rgba(111, 111, 111, 0.3)',
+			background: 'rgba( 205, 205, 205, 0.25 )',
 			border: 'rgba(255, 255, 255, 0.18)',
 		},
 	},

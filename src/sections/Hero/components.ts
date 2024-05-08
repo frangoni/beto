@@ -6,7 +6,6 @@ export const HeroLayout = styled.div`
 	align-items: center;
 	min-height: 100vh;
 	gap: 2rem;
-	overflow: hidden;
 
 	@media screen and (max-width: 768px) {
 		flex-direction: column-reverse;

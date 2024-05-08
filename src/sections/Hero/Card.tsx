@@ -128,8 +128,8 @@ const CardWrapper = styled.div`
 	align-items: center;
 	padding: 3rem;
 	border-radius: 2rem;
-	border: 1px solid ${({ theme }) => theme.secondaryBackground};
-	background: rgba(0, 0, 0, 0.25);
+	border: 1px solid ${({ theme }) => theme.card.border};
+	background: ${({ theme }) => theme.mainBackground};
 	box-shadow: 0 8px 32px 0 ${({ theme }) => theme.primary['20']};
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);

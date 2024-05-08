@@ -14,7 +14,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
 		position: 'Webflow Developer',
 		location: 'Utah. USA',
 		date: '2023 - Present',
-		image: '/svgs/amply.svg',
+		image: '/webp/amply.webp',
 		url: 'https://www.joinamply.com/',
 		description: 'Institutional sites and Web apps development with Webflow and Wized.',
 	},

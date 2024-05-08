@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import Section from '../../layout/Section';
+import Section from '../../components/layout/Section';
 import { HeroCardWrapper, HeroLayout, HeroText } from './components';
 import Typed from 'typed.js';
 import Card from './Card';
@@ -20,7 +20,7 @@ export default function Hero() {
 	}, []);
 
 	return (
-		<Section isLarge={false}>
+		<Section isLarge={false} style={{ overflow: 'hidden' }}>
 			<HeroLayout>
 				<HeroText>
 					<h1>Nice to meet you!</h1>

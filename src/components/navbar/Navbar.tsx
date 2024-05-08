@@ -4,7 +4,7 @@ import Portfolio from './icons/portfolio';
 import Work from './icons/work';
 import Education from './icons/education';
 import Menu from './icons/menu';
-import { ContainerLarge, PaddingGlobal } from '../../layout/Section';
+import { ContainerLarge, PaddingGlobal } from '../layout/Section';
 import Button from '../buttons/MainButton';
 
 import { useEffect, useState } from 'react';

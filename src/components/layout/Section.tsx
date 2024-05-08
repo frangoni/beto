@@ -4,14 +4,15 @@ import { styled } from 'styled-components';
 interface SectionProps {
 	isLarge?: boolean;
 	children: React.ReactNode;
+	style?: React.CSSProperties;
 }
 
 export default function Section(props: SectionProps) {
-	const { children, isLarge = true } = props;
+	const { style, children, isLarge = true } = props;
 	const content = <ContainerLarge>{children}</ContainerLarge>;
 
 	return (
-		<section>
+		<section style={style}>
 			<PaddingGlobal>
 				{isLarge ? <PaddingSectionLarge>{content}</PaddingSectionLarge> : <>{content}</>}
 			</PaddingGlobal>

@@ -1,7 +1,8 @@
 import { styled } from 'styled-components';
-import Section from '../../layout/Section';
+import Section from '../../components/layout/Section';
 import WORK_EXPERIENCE from './content';
 import { CardStyle } from '../../shared/styles';
+import Web from './icons/web';
 
 export default function Work() {
 	return (
@@ -11,15 +12,21 @@ export default function Work() {
 				<CardsWrapper>
 					{WORK_EXPERIENCE.map((work, index) => (
 						<Card key={index} top={12 + index * 4 + 'rem'}>
-							<h2>{work.company}</h2>
-							<p>{work.position}</p>
-							<p>{work.location}</p>
-							<p>{work.date}</p>
-							<img src={work.image} alt={work.company} />
-							<a href={work.url} target='_blank' rel='noreferrer'>
-								{work.url}
-							</a>
-							<p>{work.description}</p>
+							<CardGroup>
+								<img src={work.image} alt={work.company} />
+								<h2>{work.company}</h2>
+								<a href={work.url} target='_blank' rel='noreferrer'>
+									<Web />
+								</a>
+							</CardGroup>
+							<h4>{work.position}</h4>
+							<CardGroup>
+								<p>{work.location}</p>-<p>{work.date}</p>
+							</CardGroup>
+							<p>
+								<b>Responsibilities: </b>
+								{work.description}
+							</p>
 						</Card>
 					))}
 				</CardsWrapper>
@@ -35,6 +42,13 @@ const MainWrapper = styled.div`
 	align-items: start;
 	justify-content: center;
 	gap: 4rem;
+
+	@media screen and (max-width: 768px) {
+		gap: 2rem;
+		h1 {
+			text-align: center;
+		}
+	}
 `;
 
 const CardsWrapper = styled.div`
@@ -42,14 +56,13 @@ const CardsWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 200vh;
 	gap: 2rem;
 
 	& > div:nth-child(odd) {
-		border: 0.4rem solid ${({ theme }) => theme.primary['40']};
+		border: 0.4rem solid ${({ theme }) => theme.primary['20']};
 	}
 	& > div:nth-child(even) {
-		border: 0.4rem solid ${({ theme }) => theme.secondary['40']};
+		border: 0.4rem solid ${({ theme }) => theme.secondary['20']};
 	}
 `;
 
@@ -62,7 +75,7 @@ const Card = styled.div<{ top: string }>`
 	position: sticky;
 	position: -webkit-sticky;
 	top: ${({ top }) => top};
-
+	overflow: hidden;
 	${CardStyle}
 	width: 75%;
 	padding: 3rem 2rem;
@@ -72,11 +85,25 @@ const Card = styled.div<{ top: string }>`
 		top: 0rem;
 		right: 0rem;
 		height: 4rem;
-		/* border top right radius */
-		border-top-right-radius: 0.6rem;
+	}
+
+	svg {
+		height: 3rem;
+		color: ${({ theme }) => theme.text};
 	}
 
 	@media screen and (max-width: 768px) {
-		width: 90%;
+		width: 100%;
+		padding: 3rem 1rem 2rem;
+
+		img {
+			height: 3rem;
+		}
 	}
+`;
+
+const CardGroup = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 `;
