@@ -3,11 +3,11 @@ import theme, { ThemeMode } from './settings/theme';
 import { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Hero from './sections/Hero';
-import Background from './sections/Hero/Background';
 import Work from './sections/Work';
 import Portfolio from './sections/Portfolio';
 import Education from './sections/Education';
 import Contact from './sections/Contact';
+import Background from './components/background';
 
 function App() {
 	const [themeMode, setThemeMode] = useState<ThemeMode>('dark');
@@ -19,8 +19,9 @@ function App() {
 	return (
 		<ThemeProvider theme={theme[themeMode]}>
 			<Background />
-
-			<button /* style={{ display: 'none' }} */ onClick={toggleTheme}>Toggle Theme</button>
+			<button style={{ display: 'none' }} onClick={toggleTheme}>
+				Toggle Theme
+			</button>
 			<Navbar />
 			<MainWrapper>
 				<Hero />
