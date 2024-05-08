@@ -147,6 +147,7 @@ const BlobWrapper = styled.div`
 	img {
 		transition: filter 0.5s;
 		transform: translateY(5%);
+		width: 30rem;
 		&.hovered {
 			filter: drop-shadow(0 0 0.5rem ${({ theme }) => theme.secondaryBackground});
 		}

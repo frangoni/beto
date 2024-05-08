@@ -2,14 +2,15 @@ import { css, styled } from 'styled-components';
 
 export const HeroLayout = styled.div`
 	display: flex;
-	justify-content: space-between;
+	flex-flow: row wrap;
+	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	gap: 2rem;
+	gap: 6rem;
 
 	@media screen and (max-width: 768px) {
 		flex-direction: column-reverse;
-		padding-top: 10rem;
+		padding-top: 8rem;
 		max-height: 100vh;
 	}
 `;
@@ -69,7 +70,7 @@ export const HeroText = styled.div`
 
 export const HeroCardWrapper = styled.div`
 	position: relative;
-	width: 50%;
+
 	@media screen and (max-width: 768px) {
 		width: 85%;
 		height: 85%;

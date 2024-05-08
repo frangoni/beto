@@ -3,7 +3,6 @@ import { css, keyframes, styled } from 'styled-components';
 export default function Background() {
 	return (
 		<div>
-			{' '}
 			<Blob1 />
 			<Blob2 />
 		</div>
