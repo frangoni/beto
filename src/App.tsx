@@ -37,7 +37,6 @@ function App() {
 const MainWrapper = styled.div`
 	background-color: ${({ theme }) => theme.mainbackground};
 	color: ${({ theme }) => theme.text};
-	min-height: 200vh;
 `;
 
 export default App;

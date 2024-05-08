@@ -6,11 +6,13 @@ export const HeroLayout = styled.div`
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	gap: 6rem;
+	padding-top: 8rem;
+	gap: 2rem;
 
 	@media screen and (max-width: 768px) {
-		flex-direction: column-reverse;
-		padding-top: 8rem;
+		padding-top: 6rem;
+		gap: 0;
+		flex-flow: column-reverse nowrap;
 		max-height: 100vh;
 	}
 `;
@@ -29,6 +31,8 @@ export const HeroText = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	z-index: 2;
+	width: 50%;
 
 	span {
 		${ProfessionStyle};
@@ -65,14 +69,16 @@ export const HeroText = styled.div`
 		text-align: center;
 		width: 100%;
 		flex-grow: 1;
+		margin-top: 0;
 	}
 `;
 
 export const HeroCardWrapper = styled.div`
 	position: relative;
+	max-width: 45rem;
 
 	@media screen and (max-width: 768px) {
-		width: 85%;
-		height: 85%;
+		width: 90%;
+		max-width: 25rem;
 	}
 `;
