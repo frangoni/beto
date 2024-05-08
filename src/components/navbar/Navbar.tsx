@@ -9,6 +9,7 @@ import Button from '../buttons/MainButton';
 
 import { useEffect, useState } from 'react';
 import MobileMenu from './MobileMenu';
+import { CardStyle } from '../../shared/styles';
 
 export default function Navbar() {
 	const [hasScrolled, setHasScrolled] = useState(false);
@@ -97,12 +98,7 @@ const NavContainer = styled.div`
 	}
 
 	&.scrolled {
-		background: rgba(111, 111, 111, 0.3);
-		box-shadow: 0 8px 32px 0 ${({ theme }) => theme.primary['20']};
-		backdrop-filter: blur(20px);
-		-webkit-backdrop-filter: blur(20px);
-		border-radius: 0.8rem;
-		border: 1px solid rgba(255, 255, 255, 0.18);
+		${CardStyle}
 		margin-top: 1rem;
 	}
 

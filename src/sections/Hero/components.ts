@@ -6,6 +6,7 @@ export const HeroLayout = styled.div`
 	align-items: center;
 	min-height: 100vh;
 	gap: 2rem;
+	overflow: hidden;
 
 	@media screen and (max-width: 768px) {
 		flex-direction: column-reverse;
@@ -18,6 +19,7 @@ const ProfessionStyle = css`
 	font-size: 3rem;
 	font-family: 'Grandstander';
 	font-weight: 900;
+	line-height: 1.2;
 	@media screen and (max-width: 768px) {
 		font-size: 3rem;
 	}

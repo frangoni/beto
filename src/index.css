@@ -20,10 +20,6 @@ body {
 	padding: 0;
 }
 
-section {
-	overflow: hidden;
-}
-
 h1,
 h2,
 h3,
@@ -38,6 +34,7 @@ button {
 h1 {
 	font-size: 4rem;
 	font-family: 'MontBlanc Bold';
+	line-height: 1.2;
 
 	@media screen and (max-width: 768px) {
 		font-size: 3rem;

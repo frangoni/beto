@@ -26,6 +26,10 @@ const theme: Record<ThemeMode, Theme> = {
 			background: '#252525',
 			text: '#ebebeb',
 		},
+		card: {
+			background: ' rgba(111, 111, 111, 0.3)',
+			border: 'rgba(255, 255, 255, 0.18)',
+		},
 	},
 	light: {
 		primary: {
@@ -40,6 +44,10 @@ const theme: Record<ThemeMode, Theme> = {
 		button: {
 			background: '#cdcdcd',
 			text: '#040404',
+		},
+		card: {
+			background: ' rgba(111, 111, 111, 0.3)',
+			border: 'rgba(255, 255, 255, 0.18)',
 		},
 	},
 };
@@ -65,6 +73,10 @@ interface Theme {
 	button: {
 		background: string;
 		text: string;
+	};
+	card: {
+		background: string;
+		border: string;
 	};
 }
 
