@@ -96,7 +96,7 @@ export const ImageAccordionItem = styled.div`
 		z-index: 1;
 		opacity: 0;
 		visibility: hidden;
-		padding: 1rem;
+		padding: 4rem 2rem 1rem;
 		display: flex;
 		flex-flow: column;
 		gap: 1rem;
