@@ -1,4 +1,4 @@
-interface Portfolio {
+export interface Portfolio {
 	title: string;
 	thumbnail: string;
 	bgImage: string;

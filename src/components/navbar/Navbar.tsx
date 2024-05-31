@@ -90,7 +90,7 @@ const NavContainer = styled.div`
 	transition: all 0.3s ease-in-out;
 
 	@media screen and (max-width: 768px) {
-		padding: 2rem 1rem;
+		padding: 0.5rem 1rem;
 
 		button {
 			display: none;

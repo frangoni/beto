@@ -54,7 +54,7 @@ export const ImageAccordionItem = styled.div`
 	position: relative;
 	overflow: hidden;
 	width: 10%;
-	height: 300px;
+	height: 500px;
 	border-radius: 2rem;
 	display: flex;
 	align-items: flex-end;
@@ -92,14 +92,21 @@ export const ImageAccordionItem = styled.div`
 		display: flex;
 		flex-flow: column;
 		justify-content: flex-start;
+		align-items: flex-start;
 		gap: 1rem;
-		background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 80%));
+		background: linear-gradient(to bottom, rgb(0 0 0 / 2.5%), rgb(0 0 0 / 80%));
 		transition: 0.25s;
 
 		.stack {
 			display: flex;
 			gap: 1rem;
 			flex-wrap: wrap;
+		}
+		.url {
+			transition: 0.25s;
+		}
+		.url:hover {
+			transform: translateX(0.5rem);
 		}
 	}
 

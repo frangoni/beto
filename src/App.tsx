@@ -37,6 +37,9 @@ function App() {
 const MainWrapper = styled.div`
 	background-color: ${({ theme }) => theme.mainbackground};
 	color: ${({ theme }) => theme.text};
+	a {
+		color: ${({ theme }) => theme.text};
+	}
 `;
 
 export default App;
