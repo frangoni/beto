@@ -20,7 +20,7 @@ export default function Hero() {
 	}, []);
 
 	return (
-		<Section isLarge={false} style={{ overflow: 'hidden' }}>
+		<Section isLarge={false} style={{ overflow: 'hidden' }} id='hero'>
 			<HeroLayout>
 				<HeroText>
 					<h1>Nice to meet you!</h1>

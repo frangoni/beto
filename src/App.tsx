@@ -8,6 +8,7 @@ import Portfolio from './sections/Portfolio';
 import Education from './sections/Education';
 import Contact from './sections/Contact';
 import Background from './components/background';
+import { ReactLenis } from '@studio-freight/react-lenis';
 
 function App() {
 	const [themeMode, setThemeMode] = useState<ThemeMode>('dark');
@@ -23,13 +24,16 @@ function App() {
 				Toggle Theme
 			</button>
 			<Navbar />
-			<MainWrapper>
-				<Hero />
-				<Work />
-				<Portfolio />
-				<Education />
-				<Contact />
-			</MainWrapper>
+
+			<ReactLenis root>
+				<MainWrapper>
+					<Hero />
+					<Work />
+					<Portfolio />
+					<Education />
+					<Contact />
+				</MainWrapper>
+			</ReactLenis>
 		</ThemeProvider>
 	);
 }

@@ -4,7 +4,7 @@ import { AccordionWrapper } from './components';
 
 export default function Portfolio() {
 	return (
-		<Section isLarge>
+		<Section isLarge id='portfolio'>
 			<MainWrapper>
 				<h1>My Portfolio</h1>
 				<AccordionWrapper>

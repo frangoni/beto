@@ -5,14 +5,15 @@ interface SectionProps {
 	isLarge?: boolean;
 	children: React.ReactNode;
 	style?: React.CSSProperties;
+	id?: string;
 }
 
 export default function Section(props: SectionProps) {
-	const { style, children, isLarge = true } = props;
+	const { style, children, id, isLarge = true } = props;
 	const content = <ContainerLarge>{children}</ContainerLarge>;
 
 	return (
-		<section style={style}>
+		<section id={id} style={style}>
 			<PaddingGlobal>
 				{isLarge ? <PaddingSectionLarge>{content}</PaddingSectionLarge> : <>{content}</>}
 			</PaddingGlobal>

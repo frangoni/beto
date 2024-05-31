@@ -6,7 +6,7 @@ import Web from './icons/web';
 
 export default function Work() {
 	return (
-		<Section isLarge>
+		<Section isLarge id='work'>
 			<MainWrapper>
 				<h1>Work Experience</h1>
 				<CardsWrapper>

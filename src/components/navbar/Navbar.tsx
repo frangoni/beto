@@ -14,7 +14,6 @@ import { CardStyle } from '../../shared/styles';
 export default function Navbar() {
 	const [hasScrolled, setHasScrolled] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
-	console.log(isOpen);
 
 	useEffect(() => {
 		const handleScroll = () => (window.scrollY > 100 ? setHasScrolled(true) : setHasScrolled(false));
@@ -25,32 +24,31 @@ export default function Navbar() {
 	function handleOpen() {
 		setIsOpen(!isOpen);
 	}
+
+	function navigateToSection(section: string) {
+		document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+	}
 	const cls = hasScrolled ? 'scrolled' : '';
 	return (
 		<Nav>
 			<PaddingGlobal>
 				<ContainerLarge>
 					<NavContainer className={cls}>
-						<a href='#root' className='nav-icon'>
+						<a onClick={() => navigateToSection('hero')} className='nav-icon'>
 							<img className='beto-logo' src={logo} alt='Beto dev' />
 						</a>
 						<div className='icons-wrapper'>
-							<a href='#work' className='nav-icon'>
+							<a onClick={() => navigateToSection('work')} className='nav-icon'>
 								<Work />
 							</a>
-							<a href='#portfolio' className='nav-icon'>
+							<a onClick={() => navigateToSection('portfolio')} className='nav-icon'>
 								<Portfolio />
 							</a>
-							<a href='#education' className='nav-icon'>
+							<a onClick={() => navigateToSection('education')} className='nav-icon'>
 								<Education />
 							</a>
 						</div>
-						<Button
-							content='Contact me'
-							onClick={() => {
-								console.log('pressed');
-							}}
-						/>
+						<Button content='Contact me' onClick={() => navigateToSection('contact')} />
 						<span className='nav-icon mobile' onClick={handleOpen}>
 							<Menu />
 						</span>
