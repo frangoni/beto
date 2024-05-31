@@ -49,3 +49,18 @@ export const ContainerLarge = styled.div`
 	margin-inline: auto;
 	max-width: 80rem;
 `;
+
+export const MainWrapper = styled.div`
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
+
+	@media screen and (max-width: 768px) {
+		gap: 2rem;
+		h1 {
+			text-align: center;
+		}
+	}
+`;

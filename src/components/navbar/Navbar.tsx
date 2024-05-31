@@ -85,8 +85,8 @@ const NavContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 4rem 2rem;
-	height: 5rem;
+	padding: 1rem 2rem;
+
 	transition: all 0.3s ease-in-out;
 
 	@media screen and (max-width: 768px) {
