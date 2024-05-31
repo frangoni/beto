@@ -6,7 +6,7 @@ export interface Portfolio {
 	stack: Tech[];
 }
 
-interface Tech {
+export interface Tech {
 	color: string;
 	image: string;
 	url: string;

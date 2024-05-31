@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import { ImageAccordionItem, StackLogo } from './components';
-import { Portfolio } from './content';
+import { Portfolio, Tech } from './content';
 import { gsap } from 'gsap';
 
 interface ItemProps {
@@ -15,22 +15,30 @@ export default function PortfolioItem({ item, index, active, setActive }: ItemPr
 	const isActive = active === index ? 'active' : '';
 
 	useGSAP(() => {
-		const tl = gsap.timeline({ delay: 0.5, ease: 'power1.inOut' });
-
+		const tl = gsap.timeline({ delay: 0.25, ease: 'power1.inOut' });
 		tl.fromTo(
-			`.image-accordion-item.active .stack img`,
+			'h2',
+			{ opacity: 0, y: '10%' },
 			{
-				y: '100%',
-				opacity: 0,
-			},
-			{
-				y: '0%',
 				opacity: 1,
-				stagger: 0.1,
-				duration: 0.5,
-				ease: 'power2.out',
+				y: '0%',
 			}
-		);
+		)
+			.fromTo('p', { opacity: 0, y: '10%' }, { opacity: 1, y: '0%' }, '<')
+			.fromTo(
+				`.image-accordion-item.active .stack img`,
+				{
+					y: '100%',
+					opacity: 0,
+				},
+				{
+					y: '0%',
+					opacity: 1,
+					stagger: 0.2,
+					duration: 0.5,
+					ease: 'power2.out',
+				}
+			);
 	}, [isActive]);
 
 	return (
@@ -46,6 +54,7 @@ export default function PortfolioItem({ item, index, active, setActive }: ItemPr
 				<a href={item.url} target='_blank' rel='noopener noreferrer' className='url'>
 					<h2>{item.title}</h2>
 				</a>
+				<p>Made with:</p>
 				<div className='stack'>
 					{item.stack.map((tech, index) => (
 						<StackItem tech={tech} index={index} key={index} />
@@ -56,7 +65,7 @@ export default function PortfolioItem({ item, index, active, setActive }: ItemPr
 	);
 }
 
-function StackItem({ tech, index }: { tech: Portfolio['stack'][0]; index: number }) {
+function StackItem({ tech, index }: { tech: Tech; index: number }) {
 	return (
 		<StackLogo href={tech.url} key={index} target='_blank' rel='noopener noreferrer' dropshadow={tech.color}>
 			<img src={tech.image} alt={tech.url} />

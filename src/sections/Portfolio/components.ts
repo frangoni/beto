@@ -99,9 +99,8 @@ export const ImageAccordionItem = styled.div`
 		padding: 1rem;
 		display: flex;
 		flex-flow: column;
-		justify-content: flex-start;
-		align-items: flex-start;
 		gap: 1rem;
+		align-items: flex-start;
 		background: linear-gradient(to bottom, rgb(0 0 0 / 2.5%), rgb(0 0 0 / 80%));
 		transition: 0.25s;
 
