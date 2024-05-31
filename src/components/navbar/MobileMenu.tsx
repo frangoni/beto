@@ -34,12 +34,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, handleOpen }) => {
 					<Education />
 					Education
 				</a>
-				<Button
-					content='Contact me'
-					onClick={() => {
-						console.log('pressed');
-					}}
-				/>
+				<Button content='Contact me' onClick={() => navigateToSection('contact')} />
 			</Nav>
 		</Drawer>
 	);
