@@ -22,7 +22,7 @@ export const ImageAccordionBg = styled.div`
 	z-index: 1;
 	background-size: contain;
 	background-position: center;
-	filter: blur(04x);
+	filter: blur(0.5rem);
 	transition: 0.3s;
 	border-radius: 1rem;
 	overflow: hidden;
@@ -39,7 +39,7 @@ export const ImageAccordionWrapper = styled.div`
 	position: relative;
 	z-index: 2;
 	display: flex;
-	gap: 1rem;
+	gap: 0.25rem;
 	cursor: pointer;
 	width: 100%;
 
