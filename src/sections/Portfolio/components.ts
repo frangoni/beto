@@ -11,6 +11,8 @@ export const AccordionWrapper = styled.div`
 
 	@media screen and (max-width: 768px) {
 		flex-direction: column;
+		padding: 1rem;
+		height: 60vh;
 	}
 `;
 
@@ -40,13 +42,19 @@ export const ImageAccordionWrapper = styled.div`
 	gap: 1rem;
 	cursor: pointer;
 	width: 100%;
+
+	@media screen and (max-width: 768px) {
+		gap: 0rem;
+		flex-direction: column;
+		height: 100%;
+	}
 `;
 
 export const ImageAccordionItem = styled.div`
 	position: relative;
 	overflow: hidden;
 	width: 10%;
-	height: 500px;
+	height: 300px;
 	border-radius: 2rem;
 	display: flex;
 	align-items: flex-end;
@@ -114,6 +122,23 @@ export const ImageAccordionItem = styled.div`
 		width: 90%;
 		max-width: 5rem;
 		transition: 0.5s;
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		height: 10%;
+
+		&.active {
+			height: 100%;
+			.content {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.thumbnail {
+				bottom: 50%;
+			}
+		}
 	}
 `;
 

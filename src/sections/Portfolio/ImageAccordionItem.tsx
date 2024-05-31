@@ -1,21 +1,9 @@
-import { useState } from 'react';
-import { PortfolioContent } from './content';
-import { ImageAccordionBg, ImageAccordionItem, ImageAccordionWrapper, StackLogo } from './components';
+import React from 'react'
+import { ImageAccordionItem } from './components'
 
-export const ImageAccordion = () => {
-	const [active, setActive] = useState<number>(0);
-	const handleToggle = (index: number) => setActive(index);
-
-	return (
-		<>
-			<ImageAccordionBg
-				style={{ backgroundImage: `url(${PortfolioContent[active].bgImage})` }}
-			></ImageAccordionBg>
-			<ImageAccordionWrapper>
-				{PortfolioContent.map((item, index) => {
-					const isActive = active === index ? 'active' : '';
-					return (
-						<ImageAccordionItem
+export default function Item({item,,handleToggle,isActive,index}) {
+  return (
+    <ImageAccordionItem
 							key={item.bgImage}
 							className={`image-accordion-item ${isActive}`}
 							onClick={() => handleToggle(index)}
@@ -39,9 +27,5 @@ export const ImageAccordion = () => {
 								</div>
 							</div>
 						</ImageAccordionItem>
-					);
-				})}
-			</ImageAccordionWrapper>
-		</>
-	);
-};
+  )
+}
