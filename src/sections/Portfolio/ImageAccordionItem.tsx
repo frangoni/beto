@@ -39,6 +39,7 @@ export default function PortfolioItem({ item, index, active, setActive }: ItemPr
 			className={`image-accordion-item ${isActive} ${index}`}
 			onClick={() => handleToggle(index)}
 		>
+			<h4>{item.title}</h4>
 			<img className='bg' src={item.bgImage} />
 			<img className='thumbnail' src={item.thumbnail} />
 			<div className='content'>

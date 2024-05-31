@@ -62,6 +62,14 @@ export const ImageAccordionItem = styled.div`
 	transition: 0.5s;
 	border: 0.2rem solid ${({ theme }) => theme.card.border};
 
+	h4 {
+		display: none;
+		@media screen and (max-width: 768px) {
+			margin-left: 1rem;
+			display: block;
+		}
+	}
+
 	&:hover {
 		opacity: 0.8;
 	}
