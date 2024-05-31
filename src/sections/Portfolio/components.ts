@@ -143,15 +143,25 @@ export const ImageAccordionItem = styled.div`
 		width: 100%;
 		height: 10%;
 
+		.thumbnail {
+			right: 0;
+			left: auto;
+			translate: 25% 0%;
+			max-height: 100%;
+		}
+
 		&.active {
 			height: 100%;
 			.content {
 				opacity: 1;
 				visibility: visible;
 			}
-
 			.thumbnail {
 				bottom: 50%;
+				left: 50%;
+				translate: -50% -50%;
+				width: 90%;
+				max-width: 5rem;
 			}
 		}
 	}
