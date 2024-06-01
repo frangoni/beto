@@ -15,16 +15,16 @@ export default function PortfolioItem({ item, index, active, setActive }: ItemPr
 	const isActive = active === index ? 'active' : '';
 
 	useGSAP(() => {
-		const tl = gsap.timeline({ delay: 0.25, ease: 'power1.inOut' });
+		const tl = gsap.timeline({ delay: 0.5, ease: 'power1.inOut' });
 		tl.fromTo(
-			'h2',
+			'.content h2',
 			{ opacity: 0, y: '10%' },
 			{
 				opacity: 1,
 				y: '0%',
 			}
 		)
-			.fromTo('p', { opacity: 0, y: '10%' }, { opacity: 1, y: '0%' }, '<')
+			.fromTo('.content p', { opacity: 0, y: '10%' }, { opacity: 1, y: '0%' }, '<')
 			.fromTo(
 				`.image-accordion-item.active .stack img`,
 				{

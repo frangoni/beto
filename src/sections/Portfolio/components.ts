@@ -101,6 +101,7 @@ export const ImageAccordionItem = styled.div`
 		align-items: flex-start;
 		${CardStyle}
 		transition: all 0.25s linear;
+		transition-delay: 0.25s;
 		transform: scaleY(0);
 		transform-origin: bottom;
 		opacity: 0;
@@ -131,7 +132,7 @@ export const ImageAccordionItem = styled.div`
 		translate: -50% -50%;
 		width: 90%;
 		max-width: 5rem;
-		transition: 0.5s;
+		transition: all 0.5s linear;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -154,8 +155,6 @@ export const ImageAccordionItem = styled.div`
 				bottom: 50%;
 				left: 50%;
 				translate: -50% -50%;
-				width: 90%;
-				max-width: 5rem;
 			}
 		}
 	}
