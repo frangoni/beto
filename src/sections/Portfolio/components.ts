@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { CardStyle } from '../../shared/styles';
 
 export const AccordionWrapper = styled.div`
 	position: relative;
@@ -18,9 +19,9 @@ export const AccordionWrapper = styled.div`
 
 export const ImageAccordionBg = styled.div`
 	position: absolute;
-	inset: -1rem;
+	inset: 0;
 	z-index: 1;
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 	filter: blur(0.5rem);
 	transition: 0.3s;
@@ -79,8 +80,8 @@ export const ImageAccordionItem = styled.div`
 		opacity: 1;
 
 		.content {
+			transform: scaleY(1);
 			opacity: 1;
-			visibility: visible;
 		}
 
 		.thumbnail {
@@ -94,26 +95,21 @@ export const ImageAccordionItem = styled.div`
 		left: 0;
 		width: 100%;
 		z-index: 1;
-		opacity: 0;
-		visibility: hidden;
-		padding: 4rem 2rem 1rem;
+		padding: 1rem 1.5rem;
 		display: flex;
 		flex-flow: column;
-		gap: 1rem;
 		align-items: flex-start;
-		background: linear-gradient(to bottom, rgb(0 0 0 / 2.5%), rgb(0 0 0 / 80%));
-		transition: 0.25s;
+		${CardStyle}
+		transition: all 0.25s linear;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		opacity: 0;
 
 		.stack {
 			display: flex;
 			gap: 1rem;
 			flex-wrap: wrap;
-		}
-		.url {
-			transition: 0.25s;
-		}
-		.url:hover {
-			transform: translateX(0.5rem);
+			margin-top: 0.5rem;
 		}
 	}
 
@@ -152,8 +148,7 @@ export const ImageAccordionItem = styled.div`
 		&.active {
 			height: 100%;
 			.content {
-				opacity: 1;
-				visibility: visible;
+				padding: 1rem;
 			}
 			.thumbnail {
 				bottom: 50%;
