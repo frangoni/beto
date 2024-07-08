@@ -11,7 +11,11 @@ export default function Work() {
 				<h1>Work Experience</h1>
 				<CardsWrapper>
 					{WORK_EXPERIENCE.map((work, index) => (
-						<Card key={index} top={12 + index * 4 + 'rem'}>
+						<Card
+							key={index}
+							top={12 + index * 4 + 'rem'}
+							marginBottom={(WORK_EXPERIENCE.length - index - 2) * 4 + 'rem'}
+						>
 							<CardGroup>
 								<img src={work.image} alt={work.company} />
 								<h2>{work.company}</h2>
@@ -56,7 +60,6 @@ const CardsWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 2rem;
 
 	& > div:nth-child(odd) {
 		border: 0.4rem solid ${({ theme }) => theme.primary['20']};
@@ -66,7 +69,7 @@ const CardsWrapper = styled.div`
 	}
 `;
 
-const Card = styled.div<{ top: string }>`
+const Card = styled.div<{ top: string; marginBottom: string }>`
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -75,6 +78,7 @@ const Card = styled.div<{ top: string }>`
 	position: sticky;
 	position: -webkit-sticky;
 	top: ${({ top }) => top};
+	margin-bottom: ${({ marginBottom }) => marginBottom};
 	overflow: hidden;
 	${CardStyle}
 	width: 75%;
