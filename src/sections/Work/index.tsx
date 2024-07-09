@@ -14,7 +14,7 @@ export default function Work() {
 						<Card
 							key={index}
 							top={12 + index * 4 + 'rem'}
-							marginBottom={(WORK_EXPERIENCE.length - index - 2) * 4 + 'rem'}
+							$marginbottom={(WORK_EXPERIENCE.length - index - 2) * 4 + 'rem'}
 						>
 							<CardGroup>
 								<img src={work.image} alt={work.company} />
@@ -69,7 +69,7 @@ const CardsWrapper = styled.div`
 	}
 `;
 
-const Card = styled.div<{ top: string; marginBottom: string }>`
+const Card = styled.div<{ top: string; $marginbottom: string }>`
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -78,7 +78,7 @@ const Card = styled.div<{ top: string; marginBottom: string }>`
 	position: sticky;
 	position: -webkit-sticky;
 	top: ${({ top }) => top};
-	margin-bottom: ${({ marginBottom }) => marginBottom};
+	margin-bottom: ${({ $marginbottom }) => $marginbottom};
 	overflow: hidden;
 	${CardStyle}
 	width: 75%;
