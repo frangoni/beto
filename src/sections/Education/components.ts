@@ -50,6 +50,10 @@ export const EducationCardWrapper = styled.div`
 	align-items: stretch;
 	gap: 4rem;
 	margin-left: 2rem;
+
+	@media (max-width: 768px) {
+		gap: 2rem;
+	}
 `;
 
 export const EducationCard = styled.div`
