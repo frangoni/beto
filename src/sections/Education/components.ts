@@ -11,6 +11,7 @@ export const StickyWrapper = styled.div`
 
 	@media (max-width: 768px) {
 		flex-direction: column;
+		align-items: center;
 	}
 `;
 
@@ -33,7 +34,7 @@ export const Timeline = styled.div`
 
 export const TimelineLine = styled.div`
 	width: 1rem;
-	height: 1%;
+	height: 0%;
 	border-radius: 5rem;
 	position: absolute;
 	top: 0;

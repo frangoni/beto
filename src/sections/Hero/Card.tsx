@@ -70,7 +70,7 @@ export default function Card() {
 					</IconWrapper>
 
 					<BlobWrapper className='blob-wrapper' data-atropos-offset='-10'>
-						<img src='/pngs/fran.png' alt='Fran' className={`beto-img ${isHovering ? 'hovered' : ''}`} />
+						<img src='/pngs/beto.png' alt='Fran' className={`beto-img ${isHovering ? 'hovered' : ''}`} />
 					</BlobWrapper>
 				</CardWrapper>
 			</Atropos>
@@ -143,11 +143,12 @@ const BlobWrapper = styled.div`
 		${({ theme }) => theme.secondary['100']} 100%
 	);
 	overflow: hidden;
+	aspect-ratio: 1;
 
 	img {
 		transition: filter 0.5s;
-		transform: translateY(5%);
-		max-width: 25rem;
+		transform: translateY(-5%);
+
 		&.hovered {
 			filter: drop-shadow(0 0 0.5rem ${({ theme }) => theme.secondaryBackground});
 		}

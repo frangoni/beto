@@ -10,8 +10,8 @@ export const StickyTimeline = () => {
 		const tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.timeline',
-				start: 'top 35%',
-				end: 'bottom 50%',
+				start: 'top center',
+				end: 'bottom top',
 				scrub: true,
 			},
 		});
@@ -22,7 +22,7 @@ export const StickyTimeline = () => {
 			gsap.from(card, {
 				scrollTrigger: {
 					trigger: card,
-					start: 'top 65%',
+					start: 'top center',
 					toggleActions: 'play pause none reverse',
 				},
 				y: 100,

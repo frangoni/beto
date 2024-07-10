@@ -1,4 +1,4 @@
-import { ThemeProvider, styled } from 'styled-components';
+import { ThemeProvider, createGlobalStyle, styled } from 'styled-components';
 import theme, { ThemeMode } from './settings/theme';
 import { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
@@ -19,6 +19,7 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme[themeMode]}>
+			<GlobalStyle />
 			<Background />
 			<button style={{ display: 'none' }} onClick={toggleTheme}>
 				Toggle Theme
@@ -45,5 +46,23 @@ const MainWrapper = styled.div`
 		color: ${({ theme }) => theme.text};
 	}
 `;
+
+const GlobalStyle = createGlobalStyle`	
+	::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: ${({ theme }) => theme.primary['60']};
+		border-radius: 1rem;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background-color: ${({ theme }) => theme.primary['80']};
+	}
+	::-webkit-scrollbar-track {
+		background: ${({ theme }) => theme.secondaryBackground};
+	}
+	
+	
+	`;
 
 export default App;

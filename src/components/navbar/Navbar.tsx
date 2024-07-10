@@ -3,6 +3,7 @@ import logo from '/svgs/beto.svg';
 import Portfolio from './icons/portfolio';
 import Work from './icons/work';
 import Education from './icons/education';
+import Logo from './icons/logo';
 import Menu from './icons/menu';
 import { ContainerLarge, PaddingGlobal } from '../layout/Section';
 import Button from '../buttons/MainButton';
@@ -34,8 +35,9 @@ export default function Navbar() {
 			<PaddingGlobal>
 				<ContainerLarge>
 					<NavContainer className={cls}>
-						<a onClick={() => navigateToSection('hero')} className='nav-icon'>
-							<img className='beto-logo' src={logo} alt='Beto dev' />
+						<a onClick={() => navigateToSection('hero')}>
+							{/* <img className='beto-logo' src={logo} alt='Beto dev' /> */}
+							<Logo className='beto-logo' />
 						</a>
 						<div className='icons-wrapper'>
 							<a onClick={() => navigateToSection('work')} className='nav-icon'>
@@ -141,7 +143,7 @@ const NavContainer = styled.div`
 	.beto-logo {
 		width: 3rem;
 		transition: all 0.3s ease-in-out;
-
+		cursor: pointer;
 		&:hover {
 			transform: scale(1.1);
 			rotate: -30deg;

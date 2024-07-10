@@ -14,6 +14,7 @@ export const AccordionWrapper = styled.div`
 		flex-direction: column;
 		padding: 1rem;
 		height: 60vh;
+		margin-top: 0;
 	}
 `;
 

@@ -5,6 +5,8 @@ import { CardStyle } from '../../shared/styles';
 import Web from './icons/web';
 
 export default function Work() {
+	const cardsLength = WORK_EXPERIENCE.length;
+
 	return (
 		<Section isLarge id='work'>
 			<MainWrapper>
@@ -13,8 +15,8 @@ export default function Work() {
 					{WORK_EXPERIENCE.map((work, index) => (
 						<Card
 							key={index}
-							top={12 + index * 4 + 'rem'}
-							$marginbottom={(WORK_EXPERIENCE.length - index - 2) * 4 + 'rem'}
+							top={12 + index * cardsLength + 'rem'}
+							$marginbottom={(cardsLength - index) * cardsLength + 'rem'}
 						>
 							<CardGroup>
 								<img src={work.image} alt={work.company} />
