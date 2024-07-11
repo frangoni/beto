@@ -1,5 +1,5 @@
 import { ThemeProvider, createGlobalStyle, styled } from 'styled-components';
-import theme, { ThemeMode } from './settings/theme';
+import { generateTheme } from './settings/theme';
 import { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Hero from './sections/Hero';
@@ -9,21 +9,16 @@ import Education from './sections/Education';
 import Contact from './sections/Contact';
 import Background from './components/background';
 import { ReactLenis } from '@studio-freight/react-lenis';
+import PaletteSelector from './components/palette/PaletteSelector';
 
 function App() {
-	const [themeMode, setThemeMode] = useState<ThemeMode>('dark');
-
-	function toggleTheme() {
-		setThemeMode(prev => (prev === 'dark' ? 'light' : 'dark'));
-	}
+	const [paletteIndex, setPaletteIndex] = useState(0);
 
 	return (
-		<ThemeProvider theme={theme[themeMode]}>
+		<ThemeProvider theme={generateTheme(paletteIndex)}>
 			<GlobalStyle />
+			<PaletteSelector setPaletteIndex={setPaletteIndex} />
 			<Background />
-			<button style={{ display: 'none' }} onClick={toggleTheme}>
-				Toggle Theme
-			</button>
 			<Navbar />
 
 			<ReactLenis root>

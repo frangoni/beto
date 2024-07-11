@@ -74,7 +74,7 @@ const drawStroke = keyframes`
 	}
 `;
 
-const IconStyle = css`
+export const IconStyle = css`
 	color: ${({ theme }) => theme.text};
 	width: 2.5rem;
 	height: 2.5rem;

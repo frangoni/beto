@@ -1,18 +1,14 @@
-const PRIMARY = 'rgba(242, 0, 137, 1)';
-const SECONDARY = 'rgba(0, 242, 195, 1)';
+export const PALETTES = [
+	['rgba(242, 0, 137, 1)', 'rgba(0, 242, 195, 1)'],
+	['rgba(251, 86, 7, 1)', 'rgba(131, 56, 236, 1)'],
+	['rgba(158, 0, 89, 1)', 'rgba(27, 231, 255, 1)'],
+	['rgba(171, 196, 171, 1)', 'rgba(109, 76, 61, 1)'],
+	['rgba(7, 9, 13, 1)', 'rgba(245, 208, 197, 1)'],
+];
 
-function generatePalette(color: string) {
+export const generateTheme = (paletteIndex: number): Theme => {
+	const [PRIMARY, SECONDARY] = PALETTES[paletteIndex];
 	return {
-		'100': color,
-		'80': color.replace('1)', '0.8)'),
-		'60': color.replace('1)', '0.6)'),
-		'40': color.replace('1)', '0.4)'),
-		'20': color.replace('1)', '0.2)'),
-	};
-}
-
-const theme: Record<ThemeMode, Theme> = {
-	dark: {
 		primary: {
 			...generatePalette(PRIMARY),
 		},
@@ -30,27 +26,18 @@ const theme: Record<ThemeMode, Theme> = {
 			background: ' rgba(111, 111, 111, 0.3)',
 			border: 'rgba(255, 255, 255, 0.18)',
 		},
-	},
-	light: {
-		primary: {
-			...generatePalette(PRIMARY),
-		},
-		secondary: {
-			...generatePalette(SECONDARY),
-		},
-		mainbackground: '#ebebeb',
-		secondaryBackground: '#cdcdcd',
-		text: '#040404',
-		button: {
-			background: '#ebebeb',
-			text: '#040404',
-		},
-		card: {
-			background: 'rgba( 205, 205, 205, 0.25 )',
-			border: 'rgba(255, 255, 255, 0.18)',
-		},
-	},
+	};
 };
+
+function generatePalette(color: string) {
+	return {
+		'100': color,
+		'80': color.replace('1)', '0.8)'),
+		'60': color.replace('1)', '0.6)'),
+		'40': color.replace('1)', '0.4)'),
+		'20': color.replace('1)', '0.2)'),
+	};
+}
 
 interface Theme {
 	primary: {
@@ -79,7 +66,3 @@ interface Theme {
 		border: string;
 	};
 }
-
-export type ThemeMode = 'dark' | 'light';
-
-export default theme;
