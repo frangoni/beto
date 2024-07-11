@@ -1,7 +1,6 @@
 import { styled } from 'styled-components';
 import { PALETTES } from '../../settings/theme';
 import Brush from './icons/brush';
-import { CardStyle } from '../../shared/styles';
 import { IconStyle } from '../navbar/Navbar';
 
 interface PaletteSelectorProps {
@@ -10,6 +9,7 @@ interface PaletteSelectorProps {
 
 export default function PaletteSelector({ setPaletteIndex }: PaletteSelectorProps) {
 	function changePalette() {
+		//@ts-ignore
 		setPaletteIndex(prev => (prev + 1) % PALETTES.length);
 	}
 

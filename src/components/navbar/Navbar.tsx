@@ -1,5 +1,4 @@
 import { css, keyframes, styled } from 'styled-components';
-import logo from '/svgs/beto.svg';
 import Portfolio from './icons/portfolio';
 import Work from './icons/work';
 import Education from './icons/education';
