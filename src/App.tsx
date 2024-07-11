@@ -1,6 +1,6 @@
 import { ThemeProvider, createGlobalStyle, styled } from 'styled-components';
 import { generateTheme } from './settings/theme';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Hero from './sections/Hero';
 import Work from './sections/Work';
@@ -12,7 +12,12 @@ import { ReactLenis } from '@studio-freight/react-lenis';
 import PaletteSelector from './components/palette/PaletteSelector';
 
 function App() {
-	const [paletteIndex, setPaletteIndex] = useState(0);
+	const palletteIndexLS = localStorage.getItem('paletteIndex');
+	const [paletteIndex, setPaletteIndex] = useState(Number(palletteIndexLS) || 0);
+
+	useEffect(() => {
+		localStorage.setItem('paletteIndex', paletteIndex.toString());
+	}, [paletteIndex]);
 
 	return (
 		<ThemeProvider theme={generateTheme(paletteIndex)}>
@@ -55,9 +60,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 	::-webkit-scrollbar-track {
 		background: ${({ theme }) => theme.secondaryBackground};
-	}
-	
-	
-	`;
+	}		
+`;
 
 export default App;

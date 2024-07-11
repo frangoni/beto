@@ -1,9 +1,9 @@
 export const PALETTES = [
 	['rgba(242, 0, 137, 1)', 'rgba(0, 242, 195, 1)'],
-	['rgba(251, 86, 7, 1)', 'rgba(131, 56, 236, 1)'],
-	['rgba(158, 0, 89, 1)', 'rgba(27, 231, 255, 1)'],
 	['rgba(171, 196, 171, 1)', 'rgba(109, 76, 61, 1)'],
+	['rgba(192, 255, 0, 1)', 'rgba(111, 0, 255, 1)'],
 	['rgba(7, 9, 13, 1)', 'rgba(245, 208, 197, 1)'],
+	['rgba(255, 79, 0, 1)', 'rgba(23, 190, 187, 1)'],
 ];
 
 export const generateTheme = (paletteIndex: number): Theme => {
