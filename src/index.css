@@ -13,6 +13,7 @@
 	box-sizing: border-box;
 	font-size: 16px;
 	font-family: 'Outfit';
+	outline: none;
 }
 html {
 	font-size: 1.125rem;
