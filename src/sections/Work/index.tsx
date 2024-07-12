@@ -15,7 +15,7 @@ export default function Work() {
 					{WORK_EXPERIENCE.map((work, index) => (
 						<Card
 							key={index}
-							top={12 + index * cardsLength + 'rem'}
+							$top={12 + index * cardsLength + 'rem'}
 							$marginbottom={(cardsLength - index) * cardsLength + 'rem'}
 						>
 							<CardGroup>
@@ -71,7 +71,7 @@ const CardsWrapper = styled.div`
 	}
 `;
 
-const Card = styled.div<{ top: string; $marginbottom: string }>`
+const Card = styled.div<{ $top: string; $marginbottom: string }>`
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -79,7 +79,7 @@ const Card = styled.div<{ top: string; $marginbottom: string }>`
 	gap: 1rem;
 	position: sticky;
 	position: -webkit-sticky;
-	top: ${({ top }) => top};
+	top: ${({ $top }) => $top};
 	margin-bottom: ${({ $marginbottom }) => $marginbottom};
 	overflow: hidden;
 	${CardStyle}

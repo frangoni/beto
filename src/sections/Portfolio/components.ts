@@ -161,9 +161,9 @@ export const ImageAccordionItem = styled.div`
 	}
 `;
 
-export const StackLogo = styled.a<{ dropshadow: string }>`
+export const StackLogo = styled.a<{ $dropshadow: string }>`
 	&:hover {
-		filter: drop-shadow(0 0 0.5rem ${({ dropshadow }) => dropshadow});
+		filter: drop-shadow(0 0 0.5rem ${({ $dropshadow }) => $dropshadow});
 	}
 	img {
 		height: 2rem;

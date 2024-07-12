@@ -49,7 +49,7 @@ export default function PaletteSelector({ setPaletteIndex }: PaletteSelectorProp
 			</FloatingIcon>
 			{PALETTES.map((palette, index) => (
 				<PaletteIcon
-					index={index}
+					$index={index}
 					key={index}
 					className='palette-icon'
 					onClick={() => changePalette(index)}
@@ -97,10 +97,10 @@ const FloatingIcon = styled.div`
 	}
 `;
 
-const PaletteIcon = styled.div<{ index: number }>`
+const PaletteIcon = styled.div<{ $index: number }>`
 	position: fixed;
 	left: 3.1rem;
-	bottom: ${({ index }) => `calc(8rem + ${index} * 2.5rem)`};
+	bottom: ${({ $index }) => `calc(8rem + ${$index} * 2.5rem)`};
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -120,7 +120,7 @@ const PaletteIcon = styled.div<{ index: number }>`
 
 	@media screen and (max-width: 768px) {
 		left: 1.1rem;
-		bottom: ${({ index }) => `calc(5rem + ${index} * 2.5rem)`};
+		bottom: ${({ $index }) => `calc(5rem + ${$index} * 2.5rem)`};
 	}
 `;
 

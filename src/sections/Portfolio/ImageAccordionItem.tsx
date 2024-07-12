@@ -67,7 +67,7 @@ export default function PortfolioItem({ item, index, active, setActive }: ItemPr
 
 function StackItem({ tech, index }: { tech: Tech; index: number }) {
 	return (
-		<StackLogo href={tech.url} key={index} target='_blank' rel='noopener noreferrer' dropshadow={tech.color}>
+		<StackLogo href={tech.url} key={index} target='_blank' rel='noopener noreferrer' $dropshadow={tech.color}>
 			<img src={tech.image} alt={tech.url} />
 		</StackLogo>
 	);
