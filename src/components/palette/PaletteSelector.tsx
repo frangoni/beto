@@ -63,12 +63,12 @@ export default function PaletteSelector({ setPaletteIndex }: PaletteSelectorProp
 const FloatingIcon = styled.div`
 	position: fixed;
 	z-index: 100;
-	border-radius: 2rem;
+	border-radius: 1rem;
 	background: ${({ theme }) => theme.secondaryBackground};
 	bottom: 2rem;
 	left: 2rem;
 	cursor: pointer;
-	padding: 1rem;
+	padding: 0.75rem;
 	border: 1px solid ${({ theme }) => theme.card.border};
 
 	svg {
@@ -117,8 +117,8 @@ const PaletteIcon = styled.div<{ index: number }>`
 	}
 
 	@media screen and (max-width: 768px) {
-		left: ${({ index }) => `calc(4rem + ${index} * 2.5rem)`};
-		bottom: 1.5rem;
+		left: 1.1rem;
+		bottom: ${({ index }) => `calc(5rem + ${index} * 2.5rem)`};
 	}
 `;
 
