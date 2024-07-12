@@ -28,6 +28,7 @@ export default function PaletteSelector({ setPaletteIndex }: PaletteSelectorProp
 				stagger: 0.1,
 				duration: 0.3,
 				ease: 'power1.out',
+				display: 'block',
 			});
 		} else {
 			gsap.to('.palette-icon', {
@@ -36,6 +37,7 @@ export default function PaletteSelector({ setPaletteIndex }: PaletteSelectorProp
 				duration: 0.3,
 				ease: 'power1.in',
 				stagger: 0.1,
+				display: 'none',
 			});
 		}
 	}, [showPalettes]);
@@ -97,7 +99,7 @@ const FloatingIcon = styled.div`
 
 const PaletteIcon = styled.div<{ index: number }>`
 	position: fixed;
-	left: 3.3rem;
+	left: 3.1rem;
 	bottom: ${({ index }) => `calc(8rem + ${index} * 2.5rem)`};
 	display: flex;
 	align-items: center;
