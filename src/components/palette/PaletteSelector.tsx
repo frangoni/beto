@@ -26,8 +26,8 @@ export default function PaletteSelector({ setPaletteIndex }: PaletteSelectorProp
 				opacity: 1,
 				y: 0,
 				stagger: 0.1,
-				duration: 0.3,
-				ease: 'power1.out',
+				duration: 1,
+				ease: 'bounce.out',
 				display: 'block',
 			});
 		} else {
