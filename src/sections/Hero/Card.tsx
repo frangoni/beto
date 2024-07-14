@@ -20,7 +20,7 @@ export default function Card() {
 		})
 			.from('.beto-img', {
 				duration: 0.5,
-				y: '10%',
+				y: '0%',
 				opacity: 0,
 			})
 			.to('.icon-1', {
