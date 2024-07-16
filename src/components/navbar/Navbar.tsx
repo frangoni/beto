@@ -1,15 +1,10 @@
 import { css, keyframes, styled } from 'styled-components';
-import Portfolio from './icons/portfolio';
-import Work from './icons/work';
-import Education from './icons/education';
-import Logo from './icons/logo';
-import Menu from './icons/menu';
 import { ContainerLarge, PaddingGlobal } from '../layout/Section';
 import Button from '../buttons/MainButton';
-
 import { useEffect, useState } from 'react';
 import MobileMenu from './MobileMenu';
 import { CardStyle } from '../../shared/styles';
+import { Logo, Work, Portfolio, Education, Menu } from '../icons';
 
 export default function Navbar() {
 	const [hasScrolled, setHasScrolled] = useState(false);

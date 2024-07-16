@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { PALETTES } from '../../settings/theme';
-import Brush from './icons/brush';
+import { Brush } from '../icons';
 import gsap from 'gsap';
 import { ColorIcon, FloatingIcon, PaletteIcon } from './components';
 

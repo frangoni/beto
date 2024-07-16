@@ -1,9 +1,6 @@
 import { styled } from 'styled-components';
-import Close from './icons/close';
-import Portfolio from './icons/portfolio';
-import Work from './icons/work';
-import Education from './icons/education';
 import Button from '../buttons/MainButton';
+import { Close, Work, Portfolio, Education } from '../icons';
 
 interface MobileMenuProps {
 	isOpen: boolean;

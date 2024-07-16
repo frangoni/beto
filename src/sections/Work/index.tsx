@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 import Section from '../../components/layout/Section';
 import WORK_EXPERIENCE from './content';
 import { CardStyle } from '../../shared/styles';
-import Web from './icons/web';
+import { Web } from '../../components/icons';
 
 export default function Work() {
 	const cardsLength = WORK_EXPERIENCE.length;

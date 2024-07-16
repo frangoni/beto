@@ -12,15 +12,20 @@ export interface Tech {
 	url: string;
 }
 
-const Vite = {
+export const Vite = {
 	color: '#646CFF',
 	image: '/svgs/stack/vite.svg',
 	url: 'https://vitejs.dev/',
 };
-const React = {
+export const React = {
 	color: '#61DAFB',
 	image: '/svgs/stack/react.svg',
 	url: 'https://reactjs.org/',
+};
+export const GSAP = {
+	color: '#88CE02',
+	image: '/svgs/stack/gsap.svg',
+	url: 'https://gsap.com/',
 };
 const Webflow = {
 	color: '#146ef5',
@@ -31,11 +36,6 @@ const Next = {
 	color: '#F4F4F4',
 	image: '/svgs/stack/next.svg',
 	url: 'https://nextjs.org/',
-};
-const GSAP = {
-	color: '#88CE02',
-	image: '/svgs/stack/gsap.svg',
-	url: 'https://gsap.com/',
 };
 const Hubspot = {
 	color: '#FF7A59',

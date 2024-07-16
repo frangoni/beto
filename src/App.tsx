@@ -10,6 +10,7 @@ import Contact from './sections/Contact';
 import Background from './components/background';
 import { ReactLenis } from '@studio-freight/react-lenis';
 import PaletteSelector from './components/palette/PaletteSelector';
+import Footer from './sections/Footer';
 
 function App() {
 	const palletteIndexLS = localStorage.getItem('paletteIndex');
@@ -34,12 +35,13 @@ function App() {
 					<Education />
 					<Contact />
 				</MainWrapper>
+				<Footer />
 			</ReactLenis>
 		</ThemeProvider>
 	);
 }
 
-const MainWrapper = styled.div`
+const MainWrapper = styled.main`
 	background-color: ${({ theme }) => theme.mainbackground};
 	color: ${({ theme }) => theme.text};
 	a {

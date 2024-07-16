@@ -4,9 +4,7 @@ import { gsap } from 'gsap';
 import Atropos from 'atropos/react';
 import { useState } from 'react';
 import 'atropos/css';
-import Barbell from './icons/barbell';
-import Earth from './icons/earth';
-import Terminal from './icons/terminal';
+import { Barbell, Earth, Terminal } from '../../components/icons';
 
 export default function Card() {
 	const [isHovering, setIsHovering] = useState(false);
