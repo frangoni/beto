@@ -1,4 +1,3 @@
-import { styled } from 'styled-components';
 import Button from '../buttons/MainButton';
 import { Close, Work, Portfolio, Education } from '../icons';
 import { Drawer, MobileNav } from './components';

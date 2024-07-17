@@ -1,5 +1,4 @@
 import { useGSAP } from '@gsap/react';
-import { Logo } from '../../components/icons';
 import Section from '../../components/layout/Section';
 import { StackItem } from '../Portfolio/ImageAccordionItem';
 import { React, Vite, GSAP } from '../Portfolio/content';
