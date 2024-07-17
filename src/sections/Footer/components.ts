@@ -48,6 +48,10 @@ export const FooterContainer = styled.div`
 
 	@media (max-width: 768px) {
 		flex-direction: column;
-		gap: 2rem;
+		gap: 1rem;
+
+		.logo-year {
+			flex-direction: column;
+		}
 	}
 `;
