@@ -106,6 +106,7 @@ export const ImageAccordionItem = styled.div`
 		transform: scaleY(0);
 		transform-origin: bottom;
 		opacity: 0;
+		will-change: transform, opacity;
 
 		.stack {
 			display: flex;
@@ -120,7 +121,7 @@ export const ImageAccordionItem = styled.div`
 		z-index: 0;
 		top: 50%;
 		left: 50%;
-		translate: -50% -50%;
+		transform: translate(-50%, -50%);
 		height: 100%;
 		filter: grayscale(0.3);
 	}
@@ -130,10 +131,11 @@ export const ImageAccordionItem = styled.div`
 		z-index: 1;
 		bottom: 5%;
 		left: 50%;
-		translate: -50% -50%;
+		transform: translate(-50%, -50%);
 		width: 90%;
 		max-width: 5rem;
 		transition: all 0.5s linear;
+		will-change: transform;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -143,7 +145,7 @@ export const ImageAccordionItem = styled.div`
 		.thumbnail {
 			right: 0;
 			left: auto;
-			translate: 25% 0%;
+			transform: translate(25%, 0%);
 			max-height: 100%;
 		}
 
@@ -155,7 +157,7 @@ export const ImageAccordionItem = styled.div`
 			.thumbnail {
 				bottom: 50%;
 				left: 50%;
-				translate: -50% -50%;
+				transform: translate(-50%, -50%);
 			}
 		}
 	}
