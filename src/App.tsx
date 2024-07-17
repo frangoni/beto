@@ -42,7 +42,7 @@ function App() {
 }
 
 const MainWrapper = styled.main`
-	background-color: ${({ theme }) => theme.mainbackground};
+	background-color: ${({ theme }) => theme.mainBackground};
 	color: ${({ theme }) => theme.text};
 	a {
 		color: ${({ theme }) => theme.text};

@@ -6,7 +6,7 @@ export default function Portfolio() {
 	return (
 		<Section isLarge id='portfolio'>
 			<MainWrapper>
-				<h1>My Portfolio</h1>
+				<h1>Portfolio</h1>
 				<AccordionWrapper>
 					<ImageAccordion />
 				</AccordionWrapper>

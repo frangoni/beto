@@ -2,7 +2,7 @@ import { keyframes, styled } from 'styled-components';
 
 interface AppButtonProps {
 	content: string;
-	onClick: () => void;
+	onClick?: () => void;
 }
 
 export default function MainButton(props: AppButtonProps) {

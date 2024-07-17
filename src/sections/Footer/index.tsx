@@ -35,7 +35,6 @@ export default function WebFooter() {
 			<Section isLarge={false}>
 				<FooterContainer className='footer-container'>
 					<span className='logo-year'>
-						<Logo className='logo' />
 						<strong>&copy; {year} Beto dev.</strong>
 					</span>
 

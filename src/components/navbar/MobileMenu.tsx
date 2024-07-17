@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 import Button from '../buttons/MainButton';
 import { Close, Work, Portfolio, Education } from '../icons';
+import { Drawer, MobileNav } from './components';
 
 interface MobileMenuProps {
 	isOpen: boolean;
@@ -18,7 +19,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, handleOpen }) => {
 			<span className={`close-icon ${isOpen ? 'open' : ''}   `} onClick={handleOpen}>
 				<Close />
 			</span>
-			<Nav>
+			<MobileNav>
 				<a onClick={() => navigateToSection('work')}>
 					<Work />
 					Work
@@ -32,73 +33,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, handleOpen }) => {
 					Education
 				</a>
 				<Button content='Contact me' onClick={() => navigateToSection('contact')} />
-			</Nav>
+			</MobileNav>
 		</Drawer>
 	);
 };
 
 export default MobileMenu;
-
-const Drawer = styled.div`
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 0;
-	height: 100vh;
-	transition: width 0.3s;
-	background-color: ${({ theme }) => theme.secondaryBackground};
-	z-index: 100;
-
-	&.open {
-		width: 100vw;
-	}
-
-	.close-icon {
-		position: absolute;
-		right: -20rem;
-		top: 0;
-		cursor: pointer;
-		transition: all 0.3s ease-in-out;
-
-		&.open {
-			top: 2rem;
-			right: 2rem;
-		}
-
-		svg {
-			width: 2.5rem;
-			height: 2.5rem;
-			color: ${({ theme }) => theme.text};
-		}
-	}
-`;
-
-const Nav = styled.nav`
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 100%;
-	gap: 2rem;
-	min-width: 15rem;
-
-	a {
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-		padding: 1rem 0;
-		cursor: pointer;
-		color: ${({ theme }) => theme.text};
-		font-size: 1.5rem;
-
-		svg {
-			width: 2.5rem;
-			height: 2.5rem;
-		}
-
-		&:hover {
-			color: ${({ theme }) => theme.primary['100']};
-		}
-	}
-`;

@@ -1,9 +1,8 @@
 import { styled } from 'styled-components';
 
 export const Footer = styled.footer`
-	background-color: ${({ theme }) => theme.mainbackground};
+	background-color: ${({ theme }) => theme.mainBackground};
 	color: ${({ theme }) => theme.text};
-	padding: 1rem;
 	text-align: center;
 `;
 

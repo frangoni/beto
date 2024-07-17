@@ -15,7 +15,7 @@ export const generateTheme = (paletteIndex: number): Theme => {
 		secondary: {
 			...generatePalette(SECONDARY),
 		},
-		mainbackground: '#040404',
+		mainBackground: '#040404',
 		secondaryBackground: '#252525',
 		text: '#ebebeb',
 		button: {
@@ -54,7 +54,7 @@ interface Theme {
 		'40': string;
 		'20': string;
 	};
-	mainbackground: string;
+	mainBackground: string;
 	secondaryBackground: string;
 	text: string;
 	button: {

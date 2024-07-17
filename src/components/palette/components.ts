@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { IconStyle } from '../navbar/Navbar';
+import { IconStyle } from '../navbar/components';
 
 export const FloatingIcon = styled.div`
 	position: fixed;

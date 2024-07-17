@@ -35,7 +35,7 @@ export const StickyTimeline = () => {
 	return (
 		<StickyWrapper className='timeline'>
 			<StickyHeader>
-				<h1>My Education</h1>
+				<h1>Education</h1>
 			</StickyHeader>
 			<Timeline>
 				<TimelineLine className='timeline-line' />
