@@ -11,6 +11,7 @@ export const BorderWrapper = styled.div`
 
 	@media (max-width: 768px) {
 		width: 100%;
+		border-radius: 2rem;
 	}
 `;
 
@@ -44,6 +45,7 @@ export const CTAContainer = styled.div`
 
 	@media (max-width: 768px) {
 		padding: 4rem 1rem;
+		border-radius: calc(2rem - 4px);
 	}
 `;
 
