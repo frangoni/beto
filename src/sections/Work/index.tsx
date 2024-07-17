@@ -27,7 +27,8 @@ export default function Work() {
 							</CardGroup>
 							<h4>{work.position}</h4>
 							<CardGroup>
-								<p>{work.location}</p>-<p>{work.date}</p>
+								<p>{work.location}</p>
+								<p>{work.date}</p>
 							</CardGroup>
 							<p>
 								<b>Responsibilities: </b>

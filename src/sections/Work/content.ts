@@ -12,7 +12,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
 	{
 		company: 'Amply',
 		position: 'Webflow Developer',
-		location: 'Utah. USA',
+		location: 'Utah, USA.',
 		date: '2023 - Present',
 		image: '/webp/amply.webp',
 		url: 'https://www.joinamply.com/',
@@ -21,7 +21,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
 	{
 		company: 'JLS Trading Co',
 		position: 'Front End Developer',
-		location: 'North Carolina, USA',
+		location: 'North Carolina, USA.',
 		date: '2021 - 2023',
 		image: '/webp/jls.webp',
 		url: 'https://www.jlstradingco.com/',
@@ -30,7 +30,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
 	{
 		company: 'Quiena',
 		position: 'Back End Developer',
-		location: 'Buenos Aires, Argentina',
+		location: 'Buenos Aires, Argentina.',
 		date: '2021',
 		image: '/webp/quiena.webp',
 		url: 'https://www.quiena.com/',
@@ -40,7 +40,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
 	{
 		company: 'Plataforma 5',
 		position: 'Mentor',
-		location: 'Buenos Aires, Argentina',
+		location: 'Buenos Aires, Argentina.',
 		date: '2021',
 		image: '/webp/p5.webp',
 		url: 'https://www.plataforma5.la/',

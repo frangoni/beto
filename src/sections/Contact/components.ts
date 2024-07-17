@@ -3,7 +3,7 @@ import { keyframes, styled } from 'styled-components';
 export const BorderWrapper = styled.div`
 	background-color: ${({ theme }) => theme.secondaryBackground};
 	padding: 4px;
-	border-radius: 8rem;
+	border-radius: 12rem;
 	position: relative;
 	overflow: hidden;
 	width: 75%;
@@ -30,7 +30,7 @@ export const CTAContainer = styled.div`
 	padding: 4rem 2rem;
 	align-items: center;
 	height: 100%;
-	border-radius: calc(8rem - 4px) 8rem;
+	border-radius: calc(12rem - 4px);
 	background-color: ${({ theme }) => theme.mainBackground};
 	z-index: 2;
 	position: relative;
@@ -51,8 +51,8 @@ export const Glow = styled.div`
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	height: 90%;
 	transform: translate(-50%, -50%);
 	filter: blur(6rem);
 	background: linear-gradient(
