@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react';
 import Section from '../../components/layout/Section';
 import { StackItem } from '../Portfolio/ImageAccordionItem';
-import { React, Vite, GSAP } from '../Portfolio/content';
+import { React, Vite, GSAP, Atropos } from '../Portfolio/content';
 import { Footer, FooterContainer } from './components';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -62,6 +62,7 @@ export default function WebFooter() {
 						<StackItem tech={React} index={0} />
 						<StackItem tech={Vite} index={1} />
 						<StackItem tech={GSAP} index={2} />
+						<StackItem tech={Atropos} index={3} />
 					</span>
 				</FooterContainer>
 			</Section>

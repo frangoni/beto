@@ -27,6 +27,11 @@ export const GSAP = {
 	image: '/svgs/stack/gsap.svg',
 	url: 'https://gsap.com/',
 };
+export const Atropos = {
+	color: '#B53DF5',
+	image: '/svgs/stack/atropos.svg',
+	url: 'https://atroposjs.com/',
+};
 const Webflow = {
 	color: '#146ef5',
 	image: '/svgs/stack/webflow.svg',

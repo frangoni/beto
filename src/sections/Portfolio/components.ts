@@ -164,6 +164,7 @@ export const ImageAccordionItem = styled.div`
 `;
 
 export const StackLogo = styled.a<{ $dropshadow: string }>`
+	transition: all 0.2s linear;
 	&:hover {
 		filter: drop-shadow(0 0 0.5rem ${({ $dropshadow }) => $dropshadow});
 	}
