@@ -23,7 +23,7 @@ const MoveBG = keyframes`
         background-position: 0% 0%;
     }
     100% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
     }
 `;
 export const CTAContainer = styled.div`
@@ -49,7 +49,7 @@ export const CTAContainer = styled.div`
 	@media (max-width: 768px) {
 		padding: 4rem 1rem;
 		border-radius: calc(${MOBILE_BORDER_RADIUS} - 4px);
-		background-size: 45%;
+		background-size: 50%;
 	}
 `;
 
