@@ -41,9 +41,10 @@ export default function PaletteSelector({ setPaletteIndex }: PaletteSelectorProp
 		}
 	}, [showPalettes]);
 
+	const cls = showPalettes ? 'active' : '';
 	return (
 		<>
-			<FloatingIcon onClick={togglePaletteIcons}>
+			<FloatingIcon className={cls} onClick={togglePaletteIcons}>
 				<Brush />
 			</FloatingIcon>
 			{PALETTES.map((palette, index) => (

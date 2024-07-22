@@ -1,9 +1,12 @@
 import { keyframes, styled } from 'styled-components';
 
+const DESKTOP_BORDER_RADIUS = '12rem';
+const MOBILE_BORDER_RADIUS = '8rem';
+
 export const BorderWrapper = styled.div`
 	background-color: ${({ theme }) => theme.secondaryBackground};
 	padding: 4px;
-	border-radius: 12rem;
+	border-radius: ${DESKTOP_BORDER_RADIUS};
 	position: relative;
 	overflow: hidden;
 	width: 75%;
@@ -11,7 +14,7 @@ export const BorderWrapper = styled.div`
 
 	@media (max-width: 768px) {
 		width: 100%;
-		border-radius: 2rem;
+		border-radius: ${MOBILE_BORDER_RADIUS};
 	}
 `;
 
@@ -20,7 +23,7 @@ const MoveBG = keyframes`
         background-position: 0% 0%;
     }
     100% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
     }
 `;
 export const CTAContainer = styled.div`
@@ -31,7 +34,7 @@ export const CTAContainer = styled.div`
 	padding: 4rem 2rem;
 	align-items: center;
 	height: 100%;
-	border-radius: calc(12rem - 4px);
+	border-radius: calc(${DESKTOP_BORDER_RADIUS} - 4px);
 	background-color: ${({ theme }) => theme.mainBackground};
 	z-index: 2;
 	position: relative;
@@ -45,7 +48,8 @@ export const CTAContainer = styled.div`
 
 	@media (max-width: 768px) {
 		padding: 4rem 1rem;
-		border-radius: calc(2rem - 4px);
+		border-radius: calc(${MOBILE_BORDER_RADIUS} - 4px);
+		background-size: 50%;
 	}
 `;
 

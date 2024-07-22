@@ -53,9 +53,7 @@ export default function Contact() {
 
 		borderWrapperElement.addEventListener('mousemove', moveGlow);
 
-		return () => {
-			borderWrapperElement.removeEventListener('mousemove', moveGlow);
-		};
+		return () => borderWrapperElement.removeEventListener('mousemove', moveGlow);
 	});
 
 	return (

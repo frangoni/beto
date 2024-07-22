@@ -16,7 +16,7 @@ export const FloatingIcon = styled.div`
 		${IconStyle}
 	}
 
-	&:hover {
+	&.active {
 		transform: translateY(-10%);
 
 		svg {
