@@ -105,8 +105,8 @@ const IconWrapper = styled.div`
 		width: 5rem;
 		rect,
 		path {
-			stroke-dasharray: 10000;
-			stroke-dashoffset: 10000;
+			stroke-dasharray: 2000;
+			stroke-dashoffset: 2000;
 			stroke: ${({ theme }) => theme.text};
 		}
 	}
