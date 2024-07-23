@@ -38,8 +38,9 @@ export const FloatingIcon = styled.div`
 
 export const PaletteIcon = styled.div<{ $index: number }>`
 	position: fixed;
-	left: 3.1rem;
+	left: 3rem;
 	bottom: ${({ $index }) => `calc(8rem + ${$index} * 2.5rem)`};
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -50,7 +51,7 @@ export const PaletteIcon = styled.div<{ $index: number }>`
 	height: 2rem;
 	background: ${({ theme }) => theme.secondaryBackground};
 	border: 2px solid ${({ theme }) => theme.card.border};
-	z-index: 100;
+	z-index: 1000;
 	transition: scale 0.3s;
 
 	&:hover {

@@ -21,7 +21,7 @@ export const PALETTES = [
 	['rgba(255, 215, 0, 1)', 'rgba(0, 128, 128, 1)'], // Gold and Teal
 	['rgba(123, 104, 238, 1)', 'rgba(50, 205, 50, 1)'], // Medium Slate Blue and Lime Green
 	['rgba(255, 69, 0, 1)', 'rgba(255, 20, 147, 1)'], // Orange Red and Deep Pink
-	['rgba(0, 206, 209, 1)', 'rgba(148, 0, 211, 1)'], // Dark Turquoise and Dark Violet
+	['rgba(0, 206, 209, 1)', 'rgba(148, 0, 211, 1)'], // Dark Turquoise and Dark Violet */
 ];
 
 export const generateTheme = (paletteIndex: number): Theme => {
