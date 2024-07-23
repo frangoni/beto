@@ -23,7 +23,7 @@ export default function Contact() {
 			scrollTrigger: {
 				trigger: borderWrapperElement,
 				start: 'top center',
-				toggleActions: 'play none none none',
+				toggleActions: 'play pause none reverse',
 			},
 		});
 
