@@ -49,6 +49,7 @@ export const HeroText = styled.div`
 				${({ theme }) => theme.secondary['100']} 100%
 			);
 			background-clip: text;
+			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			-webkit-box-decoration-break: clone;
 			box-decoration-break: clone;
