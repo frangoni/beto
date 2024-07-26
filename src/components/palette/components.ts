@@ -44,7 +44,7 @@ export const ColouredIcon = styled.div<{ $index: number }>`
 	border-radius: 50%;
 	width: 2rem;
 	height: 2rem;
-	z-index: 101;
+	z-index: 102;
 	transition: scale 0.3s;
 	overflow: hidden;
 	&:hover {
@@ -72,7 +72,7 @@ export const Tooltip = styled.div<{ $index: number }>`
 	border: 1px solid ${({ theme }) => theme.card.border};
 	color: ${({ theme }) => theme.text};
 	transition: all 0.5s ease-in-out;
-	z-index: 100;
+	z-index: 101;
 	transform: rotateY(-90deg);
 	transform-origin: left;
 
