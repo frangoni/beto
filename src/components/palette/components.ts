@@ -75,6 +75,11 @@ export const Tooltip = styled.div<{ $index: number }>`
 	z-index: 100;
 	transform: rotateY(-90deg);
 	transform-origin: left;
+
+	@media screen and (max-width: 768px) {
+		bottom: ${({ $index }) => `calc(5rem + ${$index} * 2.5rem)`};
+		left: 1rem;
+	}
 `;
 
 export const IconWrapper = styled.div`
@@ -86,6 +91,10 @@ export const IconWrapper = styled.div`
 			opacity: 1;
 			transform: rotateY(0deg);
 			left: 6rem;
+
+			@media screen and (max-width: 768px) {
+				left: 4rem;
+			}
 		}
 	}
 `;
