@@ -10,5 +10,7 @@ import Barbell from './barbell';
 import Earth from './earth';
 import Terminal from './terminal';
 import Web from './web';
+import Enter from './enter';
+import Surf from './surf';
 
-export { Brush, Close, Education, Menu, Portfolio, Work, Logo, Me, Barbell, Earth, Terminal, Web };
+export { Brush, Close, Education, Menu, Portfolio, Work, Logo, Me, Barbell, Earth, Terminal, Web, Enter, Surf };

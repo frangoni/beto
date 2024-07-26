@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import Atropos from 'atropos/react';
 import { useState } from 'react';
 import 'atropos/css';
-import { Barbell, Earth, Terminal } from '../../components/icons';
+import { Barbell, Earth, Terminal, Surf } from '../../components/icons';
 
 export default function Card() {
 	const [isHovering, setIsHovering] = useState(false);
@@ -13,7 +13,7 @@ export default function Card() {
 
 		tl.from('.blob-wrapper', {
 			duration: 0.5,
-			y: -40,
+			y: -10,
 			opacity: 0,
 		})
 			.from('.beto-img', {
@@ -58,7 +58,7 @@ export default function Card() {
 			>
 				<CardWrapper data-atropos-offset='-5'>
 					<IconWrapper className={`icon icon-1 ${isHovering ? 'hovered' : ''}`} data-atropos-offset='50'>
-						<Barbell />
+						<Surf />
 					</IconWrapper>
 					<IconWrapper className={`icon icon-2 ${isHovering ? 'hovered' : ''}`} data-atropos-offset='100'>
 						<Earth />
@@ -111,6 +111,16 @@ const IconWrapper = styled.div`
 		}
 	}
 
+	&.icon-1 {
+		svg {
+			rect,
+			path {
+				stroke-dasharray: 50;
+				stroke-dashoffset: 50;
+			}
+		}
+	}
+
 	@media screen and (max-width: 768px) {
 		width: 5rem;
 		svg {
@@ -145,7 +155,7 @@ const BlobWrapper = styled.div`
 
 	img {
 		transition: filter 0.5s;
-		transform: translateY(-5%);
+		transform: translateY(-2%);
 
 		&.hovered {
 			filter: drop-shadow(0 0 0.5rem ${({ theme }) => theme.secondaryBackground});

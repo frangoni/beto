@@ -1,6 +1,6 @@
 import Section from '../../components/layout/Section';
 import WORK_EXPERIENCE from './content';
-import { Web } from '../../components/icons';
+import { Enter } from '../../components/icons';
 import { CardGroup, CardsWrapper, MainWrapper, Card } from './components';
 
 export default function Work() {
@@ -19,11 +19,11 @@ export default function Work() {
 
 						return (
 							<Card key={index} $top={top} $marginbottom={marginBottom}>
+								<img src={work.image} alt={work.company} />
 								<CardGroup>
-									<img src={work.image} alt={work.company} />
 									<h2>{work.company}</h2>
 									<a href={work.url} target='_blank' rel='noreferrer'>
-										<Web />
+										<Enter />
 									</a>
 								</CardGroup>
 								<h4>{work.position}</h4>

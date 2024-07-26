@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react';
 import { ImageAccordionItem, StackLogo } from './components';
 import { Portfolio, Tech } from './content';
 import { gsap } from 'gsap';
+import { Enter } from '../../components/icons';
 
 interface ItemProps {
 	index: number;
@@ -17,7 +18,7 @@ export default function PortfolioItem({ item, index, active, setActive }: ItemPr
 	useGSAP(() => {
 		const tl = gsap.timeline({ delay: 0.5, ease: 'power1.inOut' });
 		tl.fromTo(
-			'.content h2',
+			'.content .url',
 			{ opacity: 0, y: '10%' },
 			{
 				opacity: 1,
@@ -53,6 +54,7 @@ export default function PortfolioItem({ item, index, active, setActive }: ItemPr
 			<div className='content'>
 				<a href={item.url} target='_blank' rel='noopener noreferrer' className='url'>
 					<h2>{item.title}</h2>
+					<Enter />
 				</a>
 				<p>Made with:</p>
 				<div className='stack'>

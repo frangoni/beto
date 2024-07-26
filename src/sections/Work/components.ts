@@ -54,8 +54,7 @@ export const Card = styled.div<{ $top: string; $marginbottom: string }>`
 	}
 
 	svg {
-		height: 3rem;
-		color: ${({ theme }) => theme.text};
+		height: 2rem;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -70,6 +69,6 @@ export const Card = styled.div<{ $top: string; $marginbottom: string }>`
 
 export const CardGroup = styled.div`
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	gap: 1rem;
 `;

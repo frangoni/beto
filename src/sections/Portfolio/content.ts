@@ -60,18 +60,25 @@ const Xano = {
 
 export const PortfolioContent: Portfolio[] = [
 	{
-		title: 'INDIC',
-		thumbnail: '/svgs/sites/indic.svg',
-		bgImage: '/webp/sites/indic.webp',
-		url: 'https://www.indicelectronics.com/',
-		stack: [Webflow, Zapier],
-	},
-	{
 		title: 'Passetto',
 		thumbnail: '/svgs/sites/passetto.svg',
 		bgImage: '/webp/sites/passetto.webp',
 		url: 'https://passetto.webflow.io/',
 		stack: [Webflow, GSAP, Hubspot],
+	},
+	{
+		title: 'Aumni',
+		thumbnail: '/svgs/sites/aumni.svg',
+		bgImage: '/webp/sites/aumni.webp',
+		url: 'https://www.aumni.fund/',
+		stack: [Webflow, GSAP],
+	},
+	{
+		title: 'INDIC',
+		thumbnail: '/svgs/sites/indic.svg',
+		bgImage: '/webp/sites/indic.webp',
+		url: 'https://www.indicelectronics.com/',
+		stack: [Webflow, Zapier],
 	},
 	{
 		title: 'Enroll ML',
@@ -80,18 +87,19 @@ export const PortfolioContent: Portfolio[] = [
 		url: 'https://www.enrollml.com/',
 		stack: [Webflow, Xano],
 	},
-	{
-		title: 'FUB',
-		thumbnail: '/svgs/sites/fub.svg',
-		bgImage: '/webp/sites/fub.webp',
-		url: 'https://fub-academy.webflow.io/',
-		stack: [Webflow],
-	},
+
 	{
 		title: 'TM DJs',
 		thumbnail: '/svgs/sites/tm.svg',
 		bgImage: '/webp/sites/tm.webp',
 		url: 'https://tmdj.com.ar/',
 		stack: [Next, React, Vite, GSAP],
+	},
+	{
+		title: 'FUB',
+		thumbnail: '/svgs/sites/fub.svg',
+		bgImage: '/webp/sites/fub.webp',
+		url: 'https://fub-academy.webflow.io/',
+		stack: [Webflow],
 	},
 ];

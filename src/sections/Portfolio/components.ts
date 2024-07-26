@@ -114,6 +114,15 @@ export const ImageAccordionItem = styled.div`
 			flex-wrap: wrap;
 			margin-top: 0.5rem;
 		}
+
+		.url {
+			display: flex;
+			align-items: baseline;
+			gap: 1rem;
+			svg {
+				height: 2rem;
+			}
+		}
 	}
 
 	.bg {
@@ -169,12 +178,12 @@ export const StackLogo = styled.a<{ $dropshadow: string }>`
 		filter: drop-shadow(0 0 0.5rem ${({ $dropshadow }) => $dropshadow});
 	}
 	img {
-		height: 2rem;
+		height: 1.5rem;
 	}
 
 	@media screen and (max-width: 768px) {
 		img {
-			height: 1.5rem;
+			height: 1rem;
 		}
 	}
 `;

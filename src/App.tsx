@@ -1,5 +1,5 @@
 import { ThemeProvider, createGlobalStyle, styled } from 'styled-components';
-import { generateTheme } from './settings/theme';
+import { generateTheme, PALETTES } from './settings/theme';
 import { useEffect, useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Hero from './sections/Hero';
@@ -14,6 +14,9 @@ import Footer from './sections/Footer';
 
 function App() {
 	const palletteIndexLS = localStorage.getItem('paletteIndex');
+	if (palletteIndexLS && Number(palletteIndexLS) >= PALETTES.length) {
+		localStorage.removeItem('paletteIndex');
+	}
 	const [paletteIndex, setPaletteIndex] = useState(Number(palletteIndexLS) || 0);
 
 	useEffect(() => {
