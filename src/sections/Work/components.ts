@@ -44,7 +44,7 @@ export const Card = styled.div<{ $top: string; $marginbottom: string }>`
 	overflow: hidden;
 	${CardStyle}
 	width: 75%;
-	padding: 3rem 2rem;
+	padding: 3rem 2rem 1.5rem;
 
 	img {
 		position: absolute;
@@ -59,10 +59,14 @@ export const Card = styled.div<{ $top: string; $marginbottom: string }>`
 
 	@media screen and (max-width: 768px) {
 		width: 100%;
-		padding: 3rem 1rem 2rem;
+		padding: 3rem 1rem 1rem;
+		gap: 0.75rem;
 
 		img {
 			height: 3rem;
+		}
+		svg {
+			height: 1.5rem;
 		}
 	}
 `;

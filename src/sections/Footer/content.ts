@@ -2,7 +2,7 @@ export const SOCIALS = [
 	{
 		name: 'GitHub',
 		link: 'https://github.com/frangoni',
-		img: '/pngs/github.png',
+		img: '/webp/github.webp',
 	},
 	{
 		name: 'LinkedIn',

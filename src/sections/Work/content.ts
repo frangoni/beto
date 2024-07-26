@@ -1,4 +1,4 @@
-interface WorkExperience {
+export interface WorkExperience {
 	company: string;
 	position: string;
 	location: string;
@@ -14,7 +14,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
 		position: 'Webflow Developer',
 		location: 'Utah, USA.',
 		date: '2023 - Present',
-		image: '/webp/amply.webp',
+		image: '/webp/work/amply.webp',
 		url: 'https://www.joinamply.com/',
 		description: 'Institutional sites and Web apps development with Webflow and Wized.',
 	},
@@ -23,7 +23,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
 		position: 'Front End Developer',
 		location: 'North Carolina, USA.',
 		date: '2021 - 2023',
-		image: '/webp/jls.webp',
+		image: '/webp/work/jls.webp',
 		url: 'https://www.jlstradingco.com/',
 		description: 'Development of an inventory management system and a campaign manager tool for Amazon sellers.',
 	},
@@ -32,7 +32,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
 		position: 'Back End Developer',
 		location: 'Buenos Aires, Argentina.',
 		date: '2021',
-		image: '/webp/quiena.webp',
+		image: '/webp/work/quiena.webp',
 		url: 'https://www.quiena.com/',
 		description:
 			'Developer for an automated investment platform. KYC microservice and main API migration to GraphQL.',
@@ -42,7 +42,7 @@ const WORK_EXPERIENCE: WorkExperience[] = [
 		position: 'Mentor',
 		location: 'Buenos Aires, Argentina.',
 		date: '2021',
-		image: '/webp/p5.webp',
+		image: '/webp/work/p5.webp',
 		url: 'https://www.plataforma5.la/',
 		description:
 			'Mentor for the Full Stack Web Development Bootcamp (Professional project). Technologies: React, Node.js, Express, MongoDB.',

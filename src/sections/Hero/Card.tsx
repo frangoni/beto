@@ -68,7 +68,7 @@ export default function Card() {
 					</IconWrapper>
 
 					<BlobWrapper className='blob-wrapper' data-atropos-offset='-10'>
-						<img src='/pngs/beto.png' alt='Fran' className={`beto-img ${isHovering ? 'hovered' : ''}`} />
+						<img src='/webp/beto.webp' alt='Fran' className={`beto-img ${isHovering ? 'hovered' : ''}`} />
 					</BlobWrapper>
 				</CardWrapper>
 			</Atropos>

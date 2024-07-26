@@ -6,9 +6,9 @@ import Card from './Card';
 
 export default function Hero() {
 	const el = useRef(null);
-	const strings = ['Front End Developer', 'Back End Developer', 'Webflow Developer', 'Business Administrator'];
 
 	useEffect(() => {
+		const strings = ['Front End Developer', 'Back End Developer', 'Webflow Developer', 'Business Administrator'];
 		const typed = new Typed(el.current, {
 			strings,
 			typeSpeed: 50,

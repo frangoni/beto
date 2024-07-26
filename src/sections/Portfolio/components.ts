@@ -96,7 +96,7 @@ export const ImageAccordionItem = styled.div`
 		left: 0;
 		width: 100%;
 		z-index: 1;
-		padding: 1rem 1.5rem;
+		padding: 1rem 1rem 0.5rem;
 		display: flex;
 		flex-flow: column;
 		align-items: flex-start;
@@ -117,8 +117,8 @@ export const ImageAccordionItem = styled.div`
 
 		.url {
 			display: flex;
-			align-items: baseline;
-			gap: 1rem;
+			align-items: end;
+			gap: 0.5rem;
 			svg {
 				height: 2rem;
 			}
@@ -160,13 +160,17 @@ export const ImageAccordionItem = styled.div`
 
 		&.active {
 			height: 100%;
-			.content {
-				padding: 1rem;
-			}
+
 			.thumbnail {
 				bottom: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+			}
+
+			.url {
+				svg {
+					height: 1.5rem;
+				}
 			}
 		}
 	}
@@ -183,7 +187,7 @@ export const StackLogo = styled.a<{ $dropshadow: string }>`
 
 	@media screen and (max-width: 768px) {
 		img {
-			height: 1rem;
+			height: 1.25rem;
 		}
 	}
 `;
