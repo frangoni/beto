@@ -23,8 +23,15 @@ function App() {
 		localStorage.setItem('paletteIndex', paletteIndex.toString());
 	}, [paletteIndex]);
 
+	const theme = generateTheme(paletteIndex);
+
+	useEffect(() => {
+		const metaTag = document.querySelector('meta[name="theme-color"]');
+		metaTag?.setAttribute('content', theme.primary['100']);
+	}, [paletteIndex]);
+
 	return (
-		<ThemeProvider theme={generateTheme(paletteIndex)}>
+		<ThemeProvider theme={theme}>
 			<GlobalStyle />
 			<PaletteSelector setPaletteIndex={setPaletteIndex} />
 			<Background />
