@@ -9,9 +9,9 @@ export const PALETTES: Palette[] = [
 	{ name: 'Deep Pink and Gold', colors: ['rgba(255, 20, 147, 1)', 'rgba(255, 215, 0, 1)'] }, // Deep Pink and Gold
 	{ name: 'Hot Pink and Deep Sky Blue', colors: ['rgba(255, 105, 180, 1)', 'rgba(0, 191, 255, 1)'] }, // Hot Pink and Deep Sky Blue
 	{ name: 'Crimson and Lawn Green', colors: ['rgba(220, 20, 60, 1)', 'rgba(124, 252, 0, 1)'] }, // Crimson and Lawn Green
-	{name: 'Canarinha', colors: ['rgba(0, 160, 0, 1)', 'rgba(255, 204, 0, 1)']}, // Canarinha
-	{name: 'Selesion', colors: ['rgba(0, 191, 255, 1)', 'rgba(255, 255, 255, 1)']}, // Celeste
-	{name: "DDF" , colors : ['rgba(255, 79, 0, 1)', 'rgba(255, 127, 80, 1)']}, // DDF
+	{ name: 'Canarinha', colors: ['rgba(0, 160, 0, 1)', 'rgba(255, 204, 0, 1)'] }, // Canarinha
+	{ name: 'Selesion', colors: ['rgba(0, 191, 255, 1)', 'rgba(255, 255, 255, 1)'] }, // Celeste
+	{ name: 'DDF', colors: ['rgba(255, 79, 0, 1)', 'rgba(255, 127, 80, 1)'] }, // DDF
 ];
 
 export const generateTheme = (paletteIndex: number): Theme => {
@@ -26,12 +26,14 @@ export const generateTheme = (paletteIndex: number): Theme => {
 		mainBackground: '#040404',
 		secondaryBackground: '#252525',
 		text: '#ebebeb',
+		alternateText: '#040404',
 		button: {
 			background: '#252525',
 			text: '#ebebeb',
 		},
 		card: {
-			background: ' rgba(111, 111, 111, 0.3)',
+			background: 'rgba(111, 111, 111, 0.3)',
+			secondaryBackground: 'rgba(50, 50, 50, 0.5)',
 			border: 'rgba(255, 255, 255, 0.18)',
 		},
 	};
@@ -65,12 +67,14 @@ interface Theme {
 	mainBackground: string;
 	secondaryBackground: string;
 	text: string;
+	alternateText: string;
 	button: {
 		background: string;
 		text: string;
 	};
 	card: {
 		background: string;
+		secondaryBackground: string;
 		border: string;
 	};
 }

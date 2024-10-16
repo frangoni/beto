@@ -60,10 +60,24 @@ const Xano = {
 
 export const PortfolioContent: Portfolio[] = [
 	{
+		title: 'Cycore',
+		thumbnail: '/svgs/sites/cycore.svg',
+		bgImage: '/webp/sites/cycore.webp',
+		url: 'https://cycore.webflow.io/',
+		stack: [Webflow, GSAP],
+	},
+	{
+		title: 'Neuron 7',
+		thumbnail: '/svgs/sites/neuron7.svg',
+		bgImage: '/webp/sites/neuron7.webp',
+		url: 'https://www.neuron7.ai/',
+		stack: [Webflow, GSAP, Hubspot],
+	},
+	{
 		title: 'Passetto',
 		thumbnail: '/svgs/sites/passetto.svg',
 		bgImage: '/webp/sites/passetto.webp',
-		url: 'https://passetto.webflow.io/',
+		url: 'https://passetto.com/',
 		stack: [Webflow, GSAP, Hubspot],
 	},
 	{
@@ -95,11 +109,11 @@ export const PortfolioContent: Portfolio[] = [
 		url: 'https://tmdj.com.ar/',
 		stack: [Next, React, Vite, GSAP],
 	},
-	{
+	/* 	{
 		title: 'FUB',
 		thumbnail: '/svgs/sites/fub.svg',
 		bgImage: '/webp/sites/fub.webp',
 		url: 'https://fub-academy.webflow.io/',
 		stack: [Webflow],
-	},
+	}, */
 ];

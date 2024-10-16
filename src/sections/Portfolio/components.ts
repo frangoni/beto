@@ -100,7 +100,10 @@ export const ImageAccordionItem = styled.div`
 		display: flex;
 		flex-flow: column;
 		align-items: flex-start;
+		gap: 0.5rem;
 		${CardStyle}
+
+		background: ${({ theme }) => theme.card.secondaryBackground};
 		transition: all 0.25s linear;
 		transition-delay: 0.25s;
 		transform: scaleY(0);
@@ -112,7 +115,6 @@ export const ImageAccordionItem = styled.div`
 			display: flex;
 			gap: 1rem;
 			flex-wrap: wrap;
-			margin-top: 0.5rem;
 		}
 
 		.url {
