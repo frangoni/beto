@@ -5,7 +5,7 @@ export const HeroLayout = styled.div`
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height: 100dvh;
 	padding-top: 8rem;
 	gap: 2rem;
 
@@ -13,7 +13,7 @@ export const HeroLayout = styled.div`
 		padding-top: 6rem;
 		gap: 0;
 		flex-flow: column-reverse nowrap;
-		max-height: 100vh;
+		max-height: 100dvh;
 	}
 `;
 
@@ -76,7 +76,7 @@ export const HeroText = styled.div`
 
 export const HeroCardWrapper = styled.div`
 	position: relative;
-	max-width: 45rem;
+	max-width: 30rem;
 
 	@media screen and (max-width: 768px) {
 		width: 90%;

@@ -84,7 +84,7 @@ const Wrapper = styled.div`
 
 const IconWrapper = styled.div`
 	position: absolute;
-	width: 7.5rem;
+	width: 5rem;
 	aspect-ratio: 1;
 	display: flex;
 	justify-content: center;
@@ -102,7 +102,7 @@ const IconWrapper = styled.div`
 			0 0 1.6rem ${({ theme }) => theme.secondary['60']}, 0 0 2rem ${({ theme }) => theme.secondary['60']};
 	}
 	svg {
-		width: 5rem;
+		width: 2.5rem;
 		rect,
 		path {
 			stroke-dasharray: 2000;
@@ -156,6 +156,7 @@ const BlobWrapper = styled.div`
 	img {
 		transition: filter 0.5s;
 		transform: translateY(-2%);
+		width: 20rem;
 
 		&.hovered {
 			filter: drop-shadow(0 0 0.5rem ${({ theme }) => theme.secondaryBackground});
