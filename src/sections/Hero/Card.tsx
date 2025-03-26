@@ -18,7 +18,7 @@ export default function Card() {
 		})
 			.from('.beto-img', {
 				duration: 0.5,
-				y: '0%',
+				y: '5%',
 				opacity: 0,
 			})
 			.to('.icon-1', {
@@ -68,7 +68,7 @@ export default function Card() {
 					</IconWrapper>
 
 					<BlobWrapper className='blob-wrapper' data-atropos-offset='-10'>
-						<img src='/webp/beto.webp' alt='Fran' className={`beto-img ${isHovering ? 'hovered' : ''}`} />
+						<img src='/webp/beto.png' alt='Fran' className={`beto-img ${isHovering ? 'hovered' : ''}`} />
 					</BlobWrapper>
 				</CardWrapper>
 			</Atropos>
@@ -155,7 +155,6 @@ const BlobWrapper = styled.div`
 
 	img {
 		transition: filter 0.5s;
-		transform: translateY(-2%);
 		width: 20rem;
 
 		&.hovered {
