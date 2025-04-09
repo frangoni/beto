@@ -7,8 +7,8 @@ export const Footer = styled.footer`
 `;
 
 export const FooterContainer = styled.div`
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
 	align-items: center;
 	gap: 1rem;
 	transition: all 0.3s ease;
@@ -39,6 +39,7 @@ export const FooterContainer = styled.div`
 	.made-with {
 		display: flex;
 		gap: 1rem;
+		justify-self: end;
 
 		img {
 			height: 1.5rem;
@@ -46,6 +47,7 @@ export const FooterContainer = styled.div`
 	}
 
 	@media (max-width: 768px) {
+		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 
