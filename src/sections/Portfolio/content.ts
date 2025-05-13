@@ -63,7 +63,7 @@ export const PortfolioContent: Portfolio[] = [
 		title: 'Cycore',
 		thumbnail: '/svgs/sites/cycore.svg',
 		bgImage: '/webp/sites/cycore.webp',
-		url: 'https://cycore.webflow.io/',
+		url: 'https://cycoresecure.com/',
 		stack: [Webflow, GSAP],
 	},
 	{

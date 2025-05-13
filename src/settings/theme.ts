@@ -9,9 +9,6 @@ export const PALETTES: Palette[] = [
 	{ name: 'Deep Pink and Gold', colors: ['rgba(255, 20, 147, 1)', 'rgba(255, 215, 0, 1)'] }, // Deep Pink and Gold
 	{ name: 'Hot Pink and Deep Sky Blue', colors: ['rgba(255, 105, 180, 1)', 'rgba(0, 191, 255, 1)'] }, // Hot Pink and Deep Sky Blue
 	{ name: 'Crimson and Lawn Green', colors: ['rgba(220, 20, 60, 1)', 'rgba(124, 252, 0, 1)'] }, // Crimson and Lawn Green
-	{ name: 'Canarinha', colors: ['rgba(0, 160, 0, 1)', 'rgba(255, 204, 0, 1)'] }, // Canarinha
-	{ name: 'Selesion', colors: ['rgba(0, 191, 255, 1)', 'rgba(255, 255, 255, 1)'] }, // Celeste
-	{ name: 'DDF', colors: ['rgba(255, 79, 0, 1)', 'rgba(255, 127, 80, 1)'] }, // DDF
 ];
 
 export const generateTheme = (paletteIndex: number): Theme => {
@@ -96,4 +93,11 @@ export interface Palette {
 	['rgba(123, 104, 238, 1)', 'rgba(50, 205, 50, 1)'], // Medium Slate Blue and Lime Green
 	['rgba(255, 69, 0, 1)', 'rgba(255, 20, 147, 1)'], // Orange Red and Deep Pink
 	['rgba(0, 206, 209, 1)', 'rgba(148, 0, 211, 1)'], // Dark Turquoise and Dark Violet
-]; */
+];
+
+	{ name: 'Canarinha', colors: ['rgba(0, 160, 0, 1)', 'rgba(255, 204, 0, 1)'] }, // Canarinha
+	{ name: 'Selesion', colors: ['rgba(0, 191, 255, 1)', 'rgba(255, 255, 255, 1)'] }, // Celeste
+	{ name: 'DDF', colors: ['rgba(255, 79, 0, 1)', 'rgba(255, 127, 80, 1)'] }, // DDF
+	 
+
+*/
