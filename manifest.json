@@ -1,0 +1,36 @@
+{
+	"short_name": "Beto Dev",
+	"name": "Beto - Full Stack Developer",
+	"description": "Beto - Full Stack Developer",
+	"icons": [
+		{
+			"src": "/svgs/beto.svg",
+			"type": "image/svg+xml",
+			"sizes": "512x512"
+		},
+		{
+			"src": "/svgs/beto.svg",
+			"type": "image/svg+xml",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/svgs/beto.svg",
+			"type": "image/svg+xml",
+			"sizes": "512x512"
+		}
+	],
+	"id": "betodev",
+	"start_url": "/",
+	"background_color": "rgb(4, 4, 4)",
+	"display": "minimal-ui",
+	"scope": "/",
+	"shortcuts": [
+		{
+			"name": "Portfolio",
+			"short_name": "portfolio",
+			"description": "View my portfolio",
+			"url": "/#portfolio",
+			"icons": [{ "src": "/svgs/beto.svg", "sizes": "192x192" }]
+		}
+	]
+}
