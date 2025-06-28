@@ -60,11 +60,25 @@ const Xano = {
 
 export const PortfolioContent: Portfolio[] = [
 	{
+		title: 'Producthero',
+		thumbnail: '/svgs/sites/producthero.svg',
+		bgImage: '/webp/sites/producthero.webp',
+		url: 'https://www.testsite.producthero.com/',
+		stack: [Webflow, GSAP, Hubspot],
+	},
+	{
 		title: 'Cycore',
 		thumbnail: '/svgs/sites/cycore.svg',
 		bgImage: '/webp/sites/cycore.webp',
 		url: 'https://cycoresecure.com/',
 		stack: [Webflow, GSAP],
+	},
+	{
+		title: 'Healthmine',
+		thumbnail: '/svgs/sites/healthmine.svg',
+		bgImage: '/webp/sites/healthmine.webp',
+		url: 'https://www.healthmine.com/',
+		stack: [Webflow, GSAP, Hubspot],
 	},
 	{
 		title: 'Neuron 7',
@@ -94,13 +108,14 @@ export const PortfolioContent: Portfolio[] = [
 		url: 'https://www.indicelectronics.com/',
 		stack: [Webflow, Zapier],
 	},
-	{
+
+	/* 	{
 		title: 'Enroll ML',
 		thumbnail: '/svgs/sites/enrollml.svg',
 		bgImage: '/webp/sites/enrollml.webp',
 		url: 'https://www.enrollml.com/',
 		stack: [Webflow, Xano],
-	},
+	}, */
 
 	{
 		title: 'TM DJs',
