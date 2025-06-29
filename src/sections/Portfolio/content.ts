@@ -52,11 +52,11 @@ const Zapier = {
 	image: '/svgs/stack/zapier.svg',
 	url: 'https://zapier.com/',
 };
-const Xano = {
+/* const Xano = {
 	color: '#164DC3',
 	image: '/svgs/stack/xano.svg',
 	url: 'https://xano.com/',
-};
+}; */
 
 export const PortfolioContent: Portfolio[] = [
 	{
